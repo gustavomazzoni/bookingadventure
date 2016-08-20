@@ -1,0 +1,44 @@
+
+<section class="headline">
+  <div class="jumbotron">
+    <h1>{{vm.location}}</h1>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="row adventures-search">
+
+    <div class="col-xs-12 col-sm-4 col-md-4 sidebar">
+      <div class="well">
+        <h4>{{"search.title" | translate}}</h4>
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-4 col-md-8 listing">
+      <div class="panel panel-default" ng-repeat="adventure in vm.adventuresList">
+        <div class="panel-body">
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img width="200px" class="media-object" ng-src="{{adventure.banner}}" alt="{{adventure.title}} Banner">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">{{adventure.title}}</h4>
+              {{adventure.description}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div>

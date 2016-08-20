@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="bookingadventure" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+  </head>
+  <body>
+
+    <header>
+      <!-- Navigation -->
+      <md-toolbar class="header" layout="row">
+        <md-button class="menu" hide-gt-sm ng-click="vm.toggleSide()" aria-label="Toggle Side Menu">
+          <md-icon md-font-library="material-icons" alt="Side Menu">menu</md-icon>
+        </md-button>
+        <h1 flex class="app-name"><span>{{appName}}</span></h1>
+      </md-toolbar>
+
+      <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
+                  ng-click="menuCollapsed = ! menuCollapsed">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">{{appName}}</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" collapse="menuCollapsed">
+              <ul class="nav navbar-nav navbar-right">
+                <li ui-sref-active="active">
+                  <a href ui-sref="home">
+                    <i class="fa fa-home"></i>
+                    Home
+                  </a>
+                </li>
+                <li ui-sref-active="active">
+                  <a href ui-sref="about">
+                    <i class="fa fa-info-circle"></i>
+                    What is it?
+                  </a>
+                </li>
+                <li ng-click="showLogin($event)">
+                  <a>
+                    <i class="fa fa-info-circle"></i>
+                    Login
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+      </nav>
+    </header>
+
+    <div class="content" ui-view="main"></div>
+    
+    <footer>
+      <div class="container">
+        <div class="about-us"></div>
+        <div class="blog"></div>
+        <div class="news"></div>
+        <div class="contact-us"></div>
+      </div>
+      <div class="bottom">
+        <div class="container">
+          Copyright &copy; {{appName}} {{ today | date : "yyyy" }}
+          <ul class="list-inline social-buttons">
+            <li><a target="_blank" href="http://gplus.to/"><i class="fa fa-google-plus-sign"></i></a></li>
+            <li><a target="_blank" href="http://twitter.com/"><i class="fa fa-twitter-sign"></i></a></li>
+            <li><a target="_blank" href="http://linkedin.com/"><i class="fa fa-linkedin-sign"></i></a></li>
+            <li><a target="_blank" href="http://github.com/"><i class="fa fa-github-sign"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+  </body>
+</html>

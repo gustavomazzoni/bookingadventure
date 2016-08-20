@@ -1,0 +1,54 @@
+<div class="calendar">
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <div class="form-group col-xs-6">
+        <label>Date:</label>
+        <select name="dateFiler" ng-model="vm.selectedDate" class="form-control"
+          ng-options="date for date in vm.dates track by date"
+          ng-change="$state.go('.',{date: vm.selectedDate, quantity: vm.selectedQuantity})"></select>
+      </div>
+      <div class="form-group col-xs-6">
+        <label>Number of adventurous:</label>
+        <select name="quantityFilter" ng-model="vm.selectedQuantity" class="form-control"
+          ng-options="quantity for quantity in vm.quantities track by quantity"
+          ng-change="$state.go('.',{date: vm.selectedDate, quantity: vm.selectedQuantity})"></select>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <ul class="nav nav-pills nav-justified">
+        <li ng-repeat="date in vm.dates" role="presentation" ui-sref-active="active" ng-class="{'active': vm.selectedDate === date}">
+          <a ui-sref=".({date: date})">{{date | date:'EEE, MMM d'}}</a>
+        </li>
+      </ul>
+
+      <div class="panel panel-default" ng-repeat="slot in vm.slots | filter:vm.filterSlots">
+        <div class="panel-body" ng-click="vm.selectSlot(slot)">
+          <div class="col-xs-4 text-center">
+            <h3>
+              {{slot.date | date:'shortTime'}}
+            </h3>
+          </div>
+          <div class="col-xs-4 text-center">
+            <h3>
+              {{slot.price | currency}}
+            </h3>
+          </div>
+          <div class="col-xs-4 text-center">
+            <h3>
+              {{slot.vacancies}}
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-large btn-primary" ng-show="formData.slot">
+        {{'reservation.buy' | translate}}
+      </button>
+    </div>
+  </div>
+
+</div>

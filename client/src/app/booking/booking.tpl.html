@@ -1,0 +1,51 @@
+<div class="container">
+
+  <section class="row booking">
+
+    <div class="page-header text-center">
+      <h1>Booking Flow</h1>
+
+      <!-- the links to our nested states using relative paths -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">
+          <ul class="breadcrumb">
+            <li><a ui-sref-active="active" ui-sref=".calendar"><span>1</span> Slots</a></li>
+            <li><a ui-sref-active="active" ui-sref=".customer"><span>2</span> Customer</a></li>
+            <li><a ui-sref-active="active" ui-sref=".payment"><span>3</span> Payment</a></li>
+            <li><a ui-sref-active="active" ui-sref=".confirmation"><span>4</span> Confirmation</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-8">
+      <form ng-submit="vm.processForm()">
+        <div ui-view></div>
+      </form>
+    </div>
+
+    <div class="col-xs-12 col-sm-4 reservation">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{'reservation.title' | translate}}</h3>
+        </div>
+        <div class="panel-body">
+          {{formData.product.title}}<br/>
+          <strong>{{formData.slot.date | date:'EEE, MMM d @ h:mm'}}</strong>
+        </div>
+        
+        <ul class="list-group" ng-show="formData.slot">
+          <li class="list-group-item">
+            {{formData.slot.price | currency}} x {{formData.quantity}} {{'reservation.people' | translate}}: {{(formData.slot.price * formData.quantity) | currency}}
+          </li>
+          <li class="list-group-item">
+            {{'reservation.tax' | translate}}: {{formData.slot.price * 0.1 | currency}}
+          </li>
+          <li class="list-group-item">{{'reservation.total' | translate}}: 1250.00</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+</div>

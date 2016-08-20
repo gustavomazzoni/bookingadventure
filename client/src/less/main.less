@@ -1,0 +1,119 @@
+/**
+ * This is the main application stylesheet. It should include or import all
+ * stylesheets used throughout the application as this is the only stylesheet in
+ * the Grunt configuration that is automatically processed.
+ */
+
+
+/**
+ * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
+ * project should be imported as the rest are just wasting space.
+ */
+
+/*@import '../../vendor/bootstrap/less/bootstrap.less';*/
+@import 'http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic';
+
+
+/**
+ * This is our main variables file. We must include it last so we can overwrite any variable
+ * definitions in our imported stylesheets.
+ */
+
+@import 'variables.less';
+
+
+/**
+ * Typography
+ */
+
+/*@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
+}*/
+
+/*body {
+	font-weight: 300;
+    line-height: 1.5em;
+}*/
+
+.text-center {
+	text-align: center;
+}
+
+.text-white {
+    color: @white;
+}
+
+.text-blue {
+	color: @blue;
+}
+
+.bg-white {
+	background-color: @white;
+}
+
+.bg-lightgray {
+	background-color: @lightgray;
+}
+
+.bg-blue {
+	background-color: @blue;
+	color: @white;
+}
+
+.md-toolbar-tools {
+	a {
+		line-height: 64px;
+	}
+}
+
+.section-padding {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.section-padding-top {
+	padding-top: 60px;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.page-header {
+	font-weight: 500;
+    color: #3C4858;
+}
+
+.title {
+  font-weight: 500;
+  color: #3C4858;
+}
+
+.description {
+  color: #999999;
+}
+
+.icon-big {
+	font-size: 60px;
+	height: 60px;
+	width: 60px;
+}
+
+.icon-medium {
+	font-size: 40px;
+    height: 40px;
+}
+
+
+/**
+ * Now that all app-wide styles have been applied, we can load the styles for
+ * all the submodules and components we are using. 
+ *
+ * TODO: In a later version of this boilerplate, I'd like to automate this.
+ */
+
+@import '../app/app.less';
+

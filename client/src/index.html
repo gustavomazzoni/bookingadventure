@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html ng-app="bookingadventure" ng-controller="AppCtrl" ng-cloak>
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+  </head>
+  <body>
+    <div layout="column" layout-fill>
+
+      <!-- Navigation -->
+      <md-toolbar class="main-nav">
+        <div class="md-toolbar-tools">
+          <md-button class="menu" hide-gt-sm ng-click="vm.toggleSide()" aria-label="Toggle Side Menu">
+            <md-icon md-font-library="material-icons" alt="Show Side Menu">menu</md-icon>
+          </md-button>
+          <h1 class="app-name">
+            <a href="/">
+              <span>{{appName}}</span>
+            </a>
+          </h1>
+          <!-- fill up the space between left and right area -->
+          <span flex></span>
+          <ul hide show-gt-sm>
+            <li>
+              <md-button class="main-nav-button" href="#how_it_works" aria-label="How it works">
+                <span>How it works</span>
+              </md-button>
+            </li>
+          </ul>
+        </div>
+      </md-toolbar>
+      <md-content flex layout="column" layout-fill>
+        <div class="main-content" ui-view="main"></div>
+
+        <footer>
+          <div layout="row" layout-padding>
+            <div flex layout="column">
+              <h3>{{ 'aboutUs.title' | translate }}</h3>
+              <p>{{ 'aboutUs.description' | translate }}</p>
+            </div>
+
+            <div flex layout="column">
+              <div class="widget widget_recent_post">
+                <h3>{{ 'blog.title' | translate }}</h3>
+                <ul>
+                  <li><a href="/">Post</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div flex layout="column">
+              <h3>{{ 'contact.title' | translate }}</h3>
+              <div class="widget widget-address">
+                <address>
+                  <span>
+                    {{ 'contact.address.1.content' | translate }}
+                  </span>
+                  <span>
+                    {{ 'contact.address.2.content' | translate }}
+                  </span>
+                  <span><strong>{{ 'contact.phone' | translate }}:</strong>
+                    (208) 333 9298
+                  </span>
+                  <!-- <span><strong>{{ 'contact_fax' | translate }}:</strong>(208) 333 9298</span> -->
+                  <span><strong>{{ 'contact.email' | translate }}:</strong>
+                      <a href="mailto:contact@bookingadventure.com.br">contact@bookingadventure.com.br</a>
+                  </span>
+                </address>
+              </div>
+            </div>
+          </div>
+          <div class="bottom" layout="row">
+            <div class="container">
+              <span class="md-caption">Copyright &copy; {{appName}} {{ today | date : "yyyy" }}</span>
+              <!-- <ul class="list-inline social-buttons">
+                <li><a target="_blank" href="http://gplus.to/"><i class="fa fa-google-plus-sign"></i></a></li>
+                <li><a target="_blank" href="http://twitter.com/"><i class="fa fa-twitter-sign"></i></a></li>
+                <li><a target="_blank" href="http://linkedin.com/"><i class="fa fa-linkedin-sign"></i></a></li>
+                <li><a target="_blank" href="http://github.com/"><i class="fa fa-github-sign"></i></a></li>
+              </ul> -->
+            </div>
+          </div>
+        </footer>
+      </md-content>
+
+    </div>
+
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+  </body>
+</html>

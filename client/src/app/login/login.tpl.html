@@ -1,0 +1,33 @@
+<md-dialog flex="30" flex-sm="100" aria-label="Login" layout="column" ng-cloak>
+  <md-dialog-content layout-padding>
+    <form name="loginForm" ng-submit="vm.login(vm.credentials)" layout="column" novalidate>
+			<md-input-container>
+				<label>Email</label>
+				<input ng-model="vm.credentials.email">
+			</md-input-container>
+			<md-input-container>
+				<label>Password</label>
+				<input ng-model="vm.credentials.password" type="password">
+			</md-input-container>
+			<div layout="row" layout-wrap>
+				<div flex-xs="100">
+					<md-checkbox ng-model="vm.credentials.remember" aria-label="Remember me">Remember me</md-checkbox>
+				</div>
+				<span flex></span>
+				<div flex-xs="100">
+					<a ng-href="">Forgot password?</a>
+				</div>
+			</div>
+			<md-input-container layout="row">
+				<md-button type="submit" class="md-raised md-primary" flex="100">Login</md-button>
+			</md-input-container>
+			<md-divider></md-divider>
+			<div layout="row" layout-align="center center">
+				<div flex>
+					Don't have an account yet?
+				</div>
+				<md-button md-no-ink class="md-primary">Register</md-button>
+			</div>
+		</form>
+	</md-dialog-content>
+</md-dialog>
