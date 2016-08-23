@@ -11,7 +11,8 @@ angular.module( 'bookingadventure', [
   'ui.router',
   'ngMaterial',
   'ngAnimate',
-  'ngAria'
+  'ngAria',
+  'duScroll'
 ])
 
 .config(['$mdThemingProvider', function($mdThemingProvider) {
@@ -48,8 +49,8 @@ angular.module( 'bookingadventure', [
   guest: 'guest'
 })
 
-.controller( 'AppCtrl', ['$scope', '$location', '$translate', '$translatePartialLoader', '$anchorScroll', '$mdDialog', '$mdMedia', 
-  function AppCtrl ( $scope, $location, $translate, $translatePartialLoader, $anchorScroll, $mdDialog, $mdMedia ) {
+.controller( 'AppCtrl', ['$scope', '$location', '$translate', '$translatePartialLoader', '$document', '$mdDialog', '$mdMedia', 
+  function AppCtrl ( $scope, $location, $translate, $translatePartialLoader, $document, $mdDialog, $mdMedia ) {
   $scope.appName = 'BookingAdventure';
   $scope.today = new Date();
   $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
@@ -62,13 +63,10 @@ angular.module( 'bookingadventure', [
   $translate.refresh();
 
   $scope.scrollTo = function(id) {
-    console.log('scrollTo', id);
-    // set the location.hash to the id of
-    // the element you wish to scroll to.
-    $location.hash(id);
+    console.log('scrollTo new', id);
 
-    // call $anchorScroll()
-    $anchorScroll();
+    //Scroll to element with 0 px "padding" and in 1000 ms duration
+    $document.scrollToElement(id, 0, 1000);
   };
 
   // $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');

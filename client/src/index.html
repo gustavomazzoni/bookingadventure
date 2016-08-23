@@ -27,31 +27,31 @@
           </h1>
           <!-- fill up the space between left and right area -->
           <span flex></span>
-          <ul hide show-gt-sm>
+          <ul hide show-gt-sm du-spy-context du-scroll-container="content">
             <li>
-              <md-button class="main-nav-button" ng-click="scrollTo('what_is')" aria-label="What is">
+              <md-button class="main-nav-button" du-smooth-scroll="what_is" aria-label="What is">
                 <span>{{"menu.whatIs" | translate}}</span>
               </md-button>
             </li>
             <li>
-              <md-button class="main-nav-button" ng-click="scrollTo('how_it_works')" aria-label="How it works">
+              <md-button class="main-nav-button" du-smooth-scroll="how_it_works" aria-label="How it works">
                 <span>{{"menu.howItWorks" | translate}}</span>
               </md-button>
             </li>
             <li>
-              <md-button class="main-nav-button" ng-click="scrollTo('adventurers')" aria-label="Adventurers">
+              <md-button class="main-nav-button" du-smooth-scroll="adventurers" aria-label="Adventurers">
                 <span>{{"menu.adventurers" | translate}}</span>
               </md-button>
             </li>
             <li>
-              <md-button class="main-nav-button" ng-click="scrollTo('providers')" aria-label="Providers">
+              <md-button class="main-nav-button" du-smooth-scroll="providers" aria-label="Providers">
                 <span>{{"menu.providers" | translate}}</span>
               </md-button>
             </li>
           </ul>
         </div>
       </md-toolbar>
-      <md-content flex layout="column" layout-fill>
+      <md-content id="content" flex layout="column" layout-fill>
         <div class="main-content" ui-view="main"></div>
 
         <footer>
