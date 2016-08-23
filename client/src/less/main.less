@@ -63,19 +63,29 @@
 	color: @white;
 }
 
-.md-toolbar-tools {
-	a {
-		line-height: 64px;
-	}
-}
-
 .section-padding {
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
 
-.section-padding-top {
-	padding-top: 60px;
+.section-margin-top {
+	margin-top: 60px;
+}
+
+.row-space-1 {
+	margin-bottom: 10px;
+}
+
+.row-space-2 {
+	margin-bottom: 20px;
+}
+
+.row-space-4 {
+	margin-bottom: 40px;
+}
+
+.row-space-6 {
+	margin-bottom: 60px;
 }
 
 .no-margin {
@@ -88,12 +98,12 @@
 }
 
 .title {
-  font-weight: 500;
-  color: #3C4858;
+	font-weight: 500;
+	color: #3C4858;
 }
 
 .description {
-  color: #999999;
+	color: #999999;
 }
 
 .icon-big {
@@ -105,6 +115,27 @@
 .icon-medium {
 	font-size: 40px;
     height: 40px;
+}
+
+.widget {
+	.title {
+		text-transform: uppercase;
+	}
+	ul {
+		list-style: none;
+	    margin: 0;
+	    padding: 0;
+	}
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover, 
+	&:focus {
+    	text-decoration: underline;
+    }
 }
 
 

@@ -8,8 +8,8 @@
   </div>
 </header>
 
-<section layout="column" class="what section-padding">
-  <div layout="row">
+<section id="what_is" layout="column" class="section-padding">
+  <div class="row-space-6" layout="row">
     <div flex="66" flex-offset="15" layout="column" class="text-center">
       <h1 class="page-header">
         {{"what.title" | translate}}
@@ -17,7 +17,7 @@
       <p class="description">{{"what.description" | translate}}</p>
     </div>
   </div>
-  <div layout-xs="column" layout="row" layout-padding class="features section-padding-top text-center">
+  <div layout-xs="column" layout="row" layout-padding class="features text-center">
     <div flex class="feature">
       <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">favorite</md-icon>
       <h3 class="title">{{"what.item1.title" | translate}}</h3>
@@ -50,7 +50,7 @@
   </div>
 </section>
 
-<section layout="column" class="section-padding">
+<section id="how_it_works" layout="column" class="section-padding">
   <div layout="row">
     <div flex="66" flex-offset="15" layout="column" class="text-center">
       <h1 class="page-header">
@@ -59,26 +59,26 @@
       <p>{{"howItWorks.description" | translate}}</p>
     </div>
   </div>
-  <div layout-xs="column" layout="row" layout-padding class="features text-center">
-    <div flex class="feature">
+  <div layout-xs="column" layout="row" layout-padding class="text-center">
+    <div flex>
       <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">explore</md-icon>
       <h3 class="title">{{"howItWorks.item1.title" | translate}}</h3>
       <p class="description md-body-1">{{"howItWorks.item1.description" | translate}}</p>
     </div>
 
-    <div flex class="feature">
+    <div flex>
       <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">event</md-icon>
       <h3 class="title">{{"howItWorks.item2.title" | translate}}</h3>
       <p class="description md-body-1">{{"howItWorks.item2.description" | translate}}</p>
     </div>
 
-    <div flex class="feature">
+    <div flex>
       <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">directions_run</md-icon>
       <h3 class="title">{{"howItWorks.item3.title" | translate}}</h3>
       <p class="description md-body-1">{{"howItWorks.item3.description" | translate}}</p>
     </div>
 
-    <div flex class="feature">
+    <div flex>
       <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">tag_faces</md-icon>
       <h3 class="title">{{"howItWorks.item4.title" | translate}}</h3>
       <p class="description md-body-1">{{"howItWorks.item4.description" | translate}}</p>
@@ -86,8 +86,8 @@
   </div>
 </section>
 
-<section layout="column" class="section-padding bg-lightgray" layout-padding layout-align="center center">
-  <div>
+<section id="adventurers" layout="column" class="section-padding bg-lightgray" layout-padding layout-align="center center">
+  <div class="row-space-2">
     <h1 class="page-header">
       {{"adventurers.title" | translate}}
     </h1>
@@ -132,23 +132,24 @@
       <form name="adventurersForm" ng-submit="" layout="column" md-whiteframe="1" class="md-padding bg-white"
         aria-label="Adventurers Form" novalidate>
         <div>
-          <h3 class="title text-center">{{"adventurers.description" | translate}}</h3>
+          <h3 class="title text-center">{{"adventurers.form.title" | translate}}</h3>
+          <p class="description text-center">{{"adventurers.form.description" | translate}}</p>
         </div>
         <md-input-container>
-          <label>{{"adventurers.name" | translate}}</label>
+          <label>{{"adventurers.form.name" | translate}}</label>
           <input ng-model="vm.adventurer.name">
         </md-input-container>
         <md-input-container>
-          <label>{{"adventurers.email" | translate}}</label>
+          <label>{{"adventurers.form.email" | translate}}</label>
           <input ng-model="vm.adventurer.email">
         </md-input-container>
-        <md-button type="submit" class="md-raised md-primary">{{"adventurers.button" | translate}}</md-button>
+        <md-button type="submit" class="md-raised md-primary">{{"adventurers.form.button" | translate}}</md-button>
       </form>
     </div>
   </div>
 </section>
 
-<section layout="column" class="section-padding" layout-padding layout-align="center center">
+<section id="providers" layout="column" class="section-padding" layout-padding layout-align="center center">
   <div>
     <h1 class="page-header text-center">
       {{"providers.title" | translate}}
@@ -175,7 +176,7 @@
     </div>
 
     <div flex class="feature">
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">group</md-icon>
+      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">supervisor_account</md-icon>
       <h3 class="title">{{"providers.item4.title" | translate}}</h3>
       <p class="description md-body-1">{{"providers.item4.description" | translate}}</p>
     </div>
@@ -184,29 +185,33 @@
     <form ng-submit="" layout="column" flex flex-gt-sm="50" layout-margin name="providersForm"
       aria-label="Providers Form" novalidate>
       <div>
-        <h3 class="title text-center">{{"providers.subtitle" | translate}}</h3>
+        <h3 class="title text-center">{{"providers.form.title" | translate}}</h3>
+      </div>
+      <div layout-gt-sm="row">
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>{{"providers.form.firstName" | translate}}</label>
+          <input ng-model="vm.provider.firstName">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>{{"providers.form.lastName" | translate}}</label>
+          <input ng-model="vm.provider.lastName">
+        </md-input-container>
+      </div>
+      <div layout-gt-sm="row">
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>{{"providers.form.phone" | translate}}</label>
+          <input ng-model="vm.provider.phone">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>{{"providers.form.city" | translate}}</label>
+          <input ng-model="vm.provider.city">
+        </md-input-container>
       </div>
       <md-input-container>
-        <label>{{"providers.firstName" | translate}}</label>
-        <input ng-model="vm.provider.firstName">
-      </md-input-container>
-      <md-input-container>
-        <label>{{"providers.lastName" | translate}}</label>
-        <input ng-model="vm.provider.lastName">
-      </md-input-container>
-      <md-input-container>
-        <label>{{"providers.phone" | translate}}</label>
-        <input ng-model="vm.provider.phone">
-      </md-input-container>
-      <md-input-container>
-        <label>{{"providers.city" | translate}}</label>
-        <input ng-model="vm.provider.city">
-      </md-input-container>
-      <md-input-container>
-        <label>{{"providers.email" | translate}}</label>
+        <label>{{"providers.form.email" | translate}}</label>
         <input ng-model="vm.provider.email">
       </md-input-container>
-      <md-button type="submit" class="md-raised md-primary">{{"providers.button" | translate}}</md-button>
+      <md-button type="submit" class="md-raised md-primary">{{"providers.form.button" | translate}}</md-button>
     </form>
   </div>
 </section>

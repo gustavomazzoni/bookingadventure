@@ -48,7 +48,8 @@ angular.module( 'bookingadventure', [
   guest: 'guest'
 })
 
-.controller( 'AppCtrl', ['$scope', '$location', '$translate', '$translatePartialLoader', '$mdDialog', '$mdMedia', function AppCtrl ( $scope, $location, $translate, $translatePartialLoader, $mdDialog, $mdMedia ) {
+.controller( 'AppCtrl', ['$scope', '$location', '$translate', '$translatePartialLoader', '$anchorScroll', '$mdDialog', '$mdMedia', 
+  function AppCtrl ( $scope, $location, $translate, $translatePartialLoader, $anchorScroll, $mdDialog, $mdMedia ) {
   $scope.appName = 'BookingAdventure';
   $scope.today = new Date();
   $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
@@ -59,6 +60,16 @@ angular.module( 'bookingadventure', [
 
   $translatePartialLoader.addPart('app');
   $translate.refresh();
+
+  $scope.scrollTo = function(id) {
+    console.log('scrollTo', id);
+    // set the location.hash to the id of
+    // the element you wish to scroll to.
+    $location.hash(id);
+
+    // call $anchorScroll()
+    $anchorScroll();
+  };
 
   // $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
   // $scope.showLogin = function(ev) {

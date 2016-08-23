@@ -1,7 +1,13 @@
 {
+	"menu": {
+		"whatIs": "What is",
+		"howItWorks": "How it works",
+		"adventurers": "Adventurers",
+		"providers": "Providers"
+	},
 	"aboutUs": {
 		"title": "About us",
-		"description": "Somos uma equipe apaixonada por esporte, natureza e aventura com a missão de adicionar experiências incríveis às vidas das pessoas através de aventuras ao ar livre em lugares paradisíacos oferecidos pela natureza."
+		"description": "We are a team of people passionate for sports, nature, travelling and adventure with the mission to add amazing experiences to people lives through outdoor adventures in beautiful places provided by nature."
 	},
 	"blog": {
 		"title": "Blog",
@@ -9,6 +15,9 @@
 	},
 	"contact": {
 		"title": "Contact us",
-		"description": ""
+		"description": "",
+		"addressContent": "Rio de Janeiro, Brazil",
+		"phone": "Phone",
+		"email": "Email"
 	}
 }

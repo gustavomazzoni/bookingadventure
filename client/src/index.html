@@ -29,8 +29,23 @@
           <span flex></span>
           <ul hide show-gt-sm>
             <li>
-              <md-button class="main-nav-button" href="#how_it_works" aria-label="How it works">
-                <span>How it works</span>
+              <md-button class="main-nav-button" ng-click="scrollTo('what_is')" aria-label="What is">
+                <span>{{"menu.whatIs" | translate}}</span>
+              </md-button>
+            </li>
+            <li>
+              <md-button class="main-nav-button" ng-click="scrollTo('how_it_works')" aria-label="How it works">
+                <span>{{"menu.howItWorks" | translate}}</span>
+              </md-button>
+            </li>
+            <li>
+              <md-button class="main-nav-button" ng-click="scrollTo('adventurers')" aria-label="Adventurers">
+                <span>{{"menu.adventurers" | translate}}</span>
+              </md-button>
+            </li>
+            <li>
+              <md-button class="main-nav-button" ng-click="scrollTo('providers')" aria-label="Providers">
+                <span>{{"menu.providers" | translate}}</span>
               </md-button>
             </li>
           </ul>
@@ -40,37 +55,35 @@
         <div class="main-content" ui-view="main"></div>
 
         <footer>
-          <div layout="row" layout-padding>
-            <div flex layout="column">
-              <h3>{{ 'aboutUs.title' | translate }}</h3>
-              <p>{{ 'aboutUs.description' | translate }}</p>
+          <div class="section-padding" layout-xs="column" layout="row" layout-padding>
+            <div flex layout="column" layout-align="start center">
+              <div class="widget widget-aboutus">
+                <h3 class="title">{{ 'aboutUs.title' | translate }}</h3>
+                <p class="md-body-1">{{ 'aboutUs.description' | translate }}</p>
+              </div>
             </div>
 
-            <div flex layout="column">
-              <div class="widget widget_recent_post">
-                <h3>{{ 'blog.title' | translate }}</h3>
-                <ul>
-                  <li><a href="/">Post</a></li>
+            <div flex layout="column" layout-align="start center">
+              <div class="widget widget-recentpost">
+                <h3 class="title">{{ 'blog.title' | translate }}</h3>
+                <ul class="md-body-1">
+                  <!-- <li><a href="/">Post Inicial</a></li> -->
                 </ul>
               </div>
             </div>
 
-            <div flex layout="column">
-              <h3>{{ 'contact.title' | translate }}</h3>
+            <div flex layout="column" layout-align="start center">
               <div class="widget widget-address">
-                <address>
+                <h3 class="title">{{ 'contact.title' | translate }}</h3>
+                <address layout="column" class="md-body-1">
                   <span>
-                    {{ 'contact.address.1.content' | translate }}
-                  </span>
-                  <span>
-                    {{ 'contact.address.2.content' | translate }}
+                    {{ 'contact.addressContent' | translate }}
                   </span>
                   <span><strong>{{ 'contact.phone' | translate }}:</strong>
-                    (208) 333 9298
+                    <a href="call:+5502198364-6683">+55 (021) 98364-6683</a>
                   </span>
-                  <!-- <span><strong>{{ 'contact_fax' | translate }}:</strong>(208) 333 9298</span> -->
                   <span><strong>{{ 'contact.email' | translate }}:</strong>
-                      <a href="mailto:contact@bookingadventure.com.br">contact@bookingadventure.com.br</a>
+                    <a href="mailto:contact@bookingadventure.com.br">contact@bookingadventure.com.br</a>
                   </span>
                 </address>
               </div>

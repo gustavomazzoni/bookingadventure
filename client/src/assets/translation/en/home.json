@@ -5,8 +5,8 @@
 		"description": "Now you are at the right place to find and book your next great adventure!"
 	},
 	"what": {
-		"title": "Nós iremos conectar você às mais incríveis aventuras",
-		"description": "BookingAdventure é um portal que reúne atividades de aventura ao ar livre de todos os tipos e níveis proporcionadas por profissionais capacitados prontos para prover uma grande experiência.",
+		"title": "We will connect you to the most amazing adventures",
+		"description": "BookingAdventure is a marketplace that brings together all kinds and levels of outdoor adventure activities provided by specialized professionals willing to make it a great experience.",
 		"item1": {
 			"title": "Do what you love",
 			"description": "Through BookingAdventure you will have access to amazing new places to practice the sports you love."
@@ -25,10 +25,10 @@
 		}
 	},
 	"belief": {
-		"title": "Acreditamos que no final de nossas vidas o que teremos serão as nossas memórias, portanto buscamos tê-las repletas de histórias para contar de experiências vividas. Nada melhor do que através de uma boa aventura."
+		"title": "We believe that in the end of our lives what will remain with us will be our memories. Therefore, we seek to have them full of stories to tell of great lived adventures."
 	},
 	"howItWorks": {
-		"title": "How it works",
+		"title": "How BookingAdventure works",
 		"description": "",
 		"item1": {
 			"title": "Explore",
@@ -49,10 +49,9 @@
 	},
 	"adventurers": {
 		"title": "Hey, Adventure yourself!",
-		"description": "Join our community of adventurers!",
 		"item1": {
 			"title": "Live new experiences",
-			"description": "Get out of your comfort zone, have new experiences and make new friends."
+			"description": "Get out of your comfort zone, have new experiences and be a better person."
 		},
 		"item2": {
 			"title": "Discover the world",
@@ -60,18 +59,22 @@
 		},
 		"item3": {
 			"title": "Practice sports",
-			"description": "Move, exercise and practice the sports you love."
+			"description": "Move, exercise and practice sports."
 		},
 		"item4": {
-			"title": "Build lifetime Memories",
+			"title": "Collect lifetime Memories",
 			"description": "Come back with the most valuable item, lifetime memories, and a lot of great stories to tell."
 		},
-		"name": "Full Name",
-		"email": "Email",
-		"button": "Sign Up"
+		"form": {
+			"title": "Join our community of adventurers!",
+			"description": "Sign Up and you will be informed about BookingAdventure launch.",
+			"name": "Full Name",
+			"email": "Email",
+			"button": "Sign Up"
+		}
 	},
 	"providers": {
-		"title": "Want to join our community of Professionals?",
+		"title": "Want to join our community of Professional Providers?",
 		"description": "Are you passionate about what you do and willing to provide amazing experiences to our adventurers?",
 		"item1": {
 			"title": "Free",
@@ -83,19 +86,21 @@
 		},
 		"item3": {
 			"title": "Management",
-			"description": "Eu molestie Purus ac. Facilisis hac in metus nunc parturient ornare consequat enim."
+			"description": "With BookingAdventure tools you will be able to manage your bookings and payments wherever you are."
 		},
 		"item4": {
 			"title": "Support Team",
-			"description": "Torquent egestas. Per integer placerat ipsum quam adipiscing vehicula nisi."
+			"description": "Whenever you need we are here to help you."
 		},
-		"subtitle": "Submit your datas to us and we get back to you",
-		"firstName": "First Name",
-		"lastName": "Last Name",
-		"phone": "Phone",
-		"city": "City",
-		"email": "Email",
-		"button": "Submit"
+		"form": {
+			"title": "Go ahead. Fill out the form below and we get back to you.",
+			"firstName": "First Name",
+			"lastName": "Last Name",
+			"phone": "Phone",
+			"city": "City",
+			"email": "Email",
+			"button": "Submit"
+		}
 	},
 	"mostPopular": {
 		"title": "Most Popular"
