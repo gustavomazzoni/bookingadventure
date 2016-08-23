@@ -9,6 +9,15 @@
 	}
 	.main-nav-button {
 		line-height: 64px;
+
+		&.active {
+			&::after {
+				content: "";
+				background: @blue;
+				display: block;
+				height: 2px
+			}
+		}
 	}
 }
 
