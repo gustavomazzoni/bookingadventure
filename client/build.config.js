@@ -8,7 +8,7 @@ module.exports = {
    * completely built.
    */
   build_dir: 'build',
-  compile_dir: 'bin', //bin
+  compile_dir: 'bin',
 
   /**
    * This is a collection of file patterns that refer to our app code (the
@@ -73,7 +73,7 @@ module.exports = {
       'vendor/angular-scroll/angular-scroll.min.js'
     ],
     css: [
-      'vendor/angular-material/angular-material.css'
+      'vendor/angular-material/angular-material.min.css'
     ],
     assets: [
     ]
