@@ -10,12 +10,21 @@
 
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <style type="text/css">
+      /**
+       * Hide when Angular is not yet loaded and initialized
+       */
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+    </style>
   </head>
   <body>
     <div layout="column" layout-fill>
 
       <!-- Navigation -->
-      <md-toolbar class="main-nav">
+      <md-toolbar class="main-nav" ng-cloak>
         <div class="md-toolbar-tools">
           <!--
           <md-button class="menu" hide-gt-sm ng-click="vm.toggleSide()" aria-label="Toggle Side Menu">
@@ -23,7 +32,7 @@
           </md-button>
           -->
           <h1 class="app-name">
-            <a href="/">
+            <a href="/" ng-cloak>
               <span>{{appName}}</span>
             </a>
           </h1>
@@ -32,22 +41,22 @@
           <ul hide show-gt-sm du-spy-context du-scroll-container="content">
             <li>
               <md-button class="main-nav-button" du-scrollspy du-smooth-scroll="what_is" aria-label="What is">
-                <span>{{"menu.whatIs" | translate}}</span>
+                <span ng-cloak>{{"menu.whatIs" | translate}}</span>
               </md-button>
             </li>
             <li>
               <md-button class="main-nav-button" du-scrollspy du-smooth-scroll="how_it_works" aria-label="How it works">
-                <span>{{"menu.howItWorks" | translate}}</span>
+                <span ng-cloak>{{"menu.howItWorks" | translate}}</span>
               </md-button>
             </li>
             <li>
               <md-button md-ink-bar class="main-nav-button" du-scrollspy du-smooth-scroll="adventurers" aria-label="Adventurers">
-                <span>{{"menu.adventurers" | translate}}</span>
+                <span ng-cloak>{{"menu.adventurers" | translate}}</span>
               </md-button>
             </li>
             <li>
               <md-button class="main-nav-button" du-scrollspy du-smooth-scroll="providers" aria-label="Providers">
-                <span>{{"menu.providers" | translate}}</span>
+                <span ng-cloak>{{"menu.providers" | translate}}</span>
                 <md-ink-bar></md-ink-bar>
               </md-button>
             </li>
@@ -55,9 +64,9 @@
         </div>
       </md-toolbar>
       <md-content id="content" flex layout="column" layout-fill>
-        <div class="main-content" ui-view="main"></div>
+        <div class="main-content" ui-view="main" ng-cloak></div>
 
-        <footer>
+        <footer ng-cloak>
           <div class="section-padding" layout-xs="column" layout="row" layout-padding>
             <div flex layout="column" layout-align="start center">
               <div class="widget widget-aboutus">
