@@ -1,0 +1,122 @@
+{
+	"title": "Home",
+	"headline": {
+		"title": "Book your next Adventure",
+		"description": "Now you are at the right place to find and book your next great adventure!"
+	},
+	"what": {
+		"title": "We will connect you to the most amazing adventures",
+		"description": "BookingAdventure is a marketplace that brings together all kinds and levels of outdoor adventure activities provided by specialized professionals willing to make it a great experience.",
+		"item1": {
+			"title": "Do what you love",
+			"description": "Through BookingAdventure you will have access to amazing new places to practice the sports you love."
+		},
+		"item2": {
+			"title": "Community",
+			"description": "Join a community of like-minded people, receive stories, tips and reviews about the adventures and as result have the power to decide which next adventure to choose."
+		},
+		"item3": {
+			"title": "Safety",
+			"description": "BookingAdventure requires that every adventure has its own safe-kit..."
+		},
+		"item4": {
+			"title": "Warrancy",
+			"description": "Book and pay for your adventure right at BookingAdventure. If you were not satisfied with the experience you can have your money back."
+		}
+	},
+	"belief": {
+		"title": "We believe that in the end of our lives what will remain with us will be our memories. Therefore, we seek to have them full of stories to tell of great lived adventures."
+	},
+	"howItWorks": {
+		"title": "How BookingAdventure works",
+		"description": "",
+		"item1": {
+			"title": "Explore",
+			"description": "Navegue pelos tipos de aventura que você mais gosta e utilize os filtros para encontrar a sua próxima grande aventura."
+		},
+		"item2": {
+			"title": "Reserve",
+			"description": "Escolha (o) dia(s) para realização da aventura, agende e pague diretamente pelo BookingAdventure."
+		},
+		"item3": {
+			"title": "Prepare-se",
+			"description": "Cada aventura possui exigências por parte do aventureiro para que esteja preparado para realizar as atividades durante a aventura."
+		},
+		"item4": {
+			"title": "Viva",
+			"description": "Chegou o dia. Siga as instruções definidas pelo especialista para início da aventura e viva essa grande experiência!"
+		}
+	},
+	"adventurers": {
+		"title": "Hey, Adventure yourself!",
+		"item1": {
+			"title": "Live new experiences",
+			"description": "Get out of your comfort zone, have new experiences and be a better person."
+		},
+		"item2": {
+			"title": "Discover the world",
+			"description": "Go outdoor, explore and discover amazing new places the nature provides us."
+		},
+		"item3": {
+			"title": "Practice sports",
+			"description": "Move, exercise and practice sports."
+		},
+		"item4": {
+			"title": "Collect lifetime Memories",
+			"description": "Come back with the most valuable item, lifetime memories, and a lot of great stories to tell."
+		},
+		"form": {
+			"title": "Join our community of adventurers!",
+			"description": "Sign Up and you will be informed about BookingAdventure launch.",
+			"name": "Full Name",
+			"email": "Email",
+			"button": "Sign Up"
+		}
+	},
+	"providers": {
+		"title": "Want to join our community of Professional Providers?",
+		"description": "Are you passionate about what you do and willing to provide amazing experiences to our adventurers?",
+		"item1": {
+			"title": "Free",
+			"description": "No cost to list your adventures in BookingAdventure. You only pay a fee when you make a sale."
+		},
+		"item2": {
+			"title": "More Customers",
+			"description": "BookingAdventure will promote your adventures ..."
+		},
+		"item3": {
+			"title": "Management",
+			"description": "With BookingAdventure tools you will be able to manage your bookings and payments wherever you are."
+		},
+		"item4": {
+			"title": "Support Team",
+			"description": "Whenever you need we are here to help you."
+		},
+		"form": {
+			"title": "Go ahead. Fill out the form below and we get back to you.",
+			"firstName": "First Name",
+			"lastName": "Last Name",
+			"phone": "Phone",
+			"city": "City",
+			"email": "Email",
+			"button": "Submit"
+		}
+	},
+	"mostPopular": {
+		"title": "Most Popular"
+	},
+	"deals": {
+		"title": "Deals"
+	},
+	"discoverPlaces": {
+		"title": "Discover Places"
+	},
+	"discoverActivities": {
+		"title": "Discover Activities"
+	},
+	"newsletter": {
+		"title": "Join the Newsletter",
+		"email": "Email",
+		"subscribe": "Subscribe"
+	}
+}

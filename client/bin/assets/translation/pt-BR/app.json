@@ -1,0 +1,23 @@
+{
+	"menu": {
+		"whatIs": "O que é",
+		"howItWorks": "Como funciona",
+		"adventurers": "Cadastre-se",
+		"providers": "Torne-se um provedor"
+	},
+	"aboutUs": {
+		"title": "Sobre nós",
+		"description": "Somos uma equipe apaixonada por esporte, natureza, viagem e aventura com a missão de adicionar experiências incríveis às vidas das pessoas através de aventuras ao ar livre em lugares paradisíacos oferecidos pela natureza."
+	},
+	"blog": {
+		"title": "Blog",
+		"description": ""
+	},
+	"contact": {
+		"title": "Contato",
+		"description": "",
+		"addressContent": "Rio de Janeiro, Brasil",
+		"phone": "Telefone",
+		"email": "Email"
+	}
+}

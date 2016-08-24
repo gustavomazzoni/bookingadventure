@@ -1,0 +1,23 @@
+{
+	"menu": {
+		"whatIs": "What is",
+		"howItWorks": "How it works",
+		"adventurers": "Sign Up",
+		"providers": "Become a provider"
+	},
+	"aboutUs": {
+		"title": "About us",
+		"description": "We are a team of people passionate for sports, nature, travelling and adventure with the mission to add amazing experiences to people lives through outdoor adventures in beautiful places provided by nature."
+	},
+	"blog": {
+		"title": "Blog",
+		"description": ""
+	},
+	"contact": {
+		"title": "Contact us",
+		"description": "",
+		"addressContent": "Rio de Janeiro, Brazil",
+		"phone": "Phone",
+		"email": "Email"
+	}
+}

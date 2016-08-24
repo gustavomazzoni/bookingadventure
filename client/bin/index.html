@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html ng-app="bookingadventure" ng-controller="AppCtrl" ng-cloak>
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="vendor/angular-material/angular-material.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bookingadventure-0.0.1.css" />
+  </head>
+  <body>
+    <div layout="column" layout-fill>
+
+      <!-- Navigation -->
+      <md-toolbar class="main-nav">
+        <div class="md-toolbar-tools">
+          <!--
+          <md-button class="menu" hide-gt-sm ng-click="vm.toggleSide()" aria-label="Toggle Side Menu">
+            <md-icon md-font-library="material-icons" alt="Show Side Menu">menu</md-icon>
+          </md-button>
+          -->
+          <h1 class="app-name">
+            <a href="/">
+              <span>{{appName}}</span>
+            </a>
+          </h1>
+          <!-- fill up the space between left and right area -->
+          <span flex></span>
+          <ul hide show-gt-sm du-spy-context du-scroll-container="content">
+            <li>
+              <md-button class="main-nav-button" du-scrollspy du-smooth-scroll="what_is" aria-label="What is">
+                <span>{{"menu.whatIs" | translate}}</span>
+              </md-button>
+            </li>
+            <li>
+              <md-button class="main-nav-button" du-scrollspy du-smooth-scroll="how_it_works" aria-label="How it works">
+                <span>{{"menu.howItWorks" | translate}}</span>
+              </md-button>
+            </li>
+            <li>
+              <md-button md-ink-bar class="main-nav-button" du-scrollspy du-smooth-scroll="adventurers" aria-label="Adventurers">
+                <span>{{"menu.adventurers" | translate}}</span>
+              </md-button>
+            </li>
+            <li>
+              <md-button class="main-nav-button" du-scrollspy du-smooth-scroll="providers" aria-label="Providers">
+                <span>{{"menu.providers" | translate}}</span>
+                <md-ink-bar></md-ink-bar>
+              </md-button>
+            </li>
+          </ul>
+        </div>
+      </md-toolbar>
+      <md-content id="content" flex layout="column" layout-fill>
+        <div class="main-content" ui-view="main"></div>
+
+        <footer>
+          <div class="section-padding" layout-xs="column" layout="row" layout-padding>
+            <div flex layout="column" layout-align="start center">
+              <div class="widget widget-aboutus">
+                <h3 class="title">{{ 'aboutUs.title' | translate }}</h3>
+                <p class="md-body-1">{{ 'aboutUs.description' | translate }}</p>
+              </div>
+            </div>
+
+            <div flex layout="column" layout-align="start center">
+              <div class="widget widget-recentpost">
+                <h3 class="title">{{ 'blog.title' | translate }}</h3>
+                <ul class="md-body-1">
+                  <!-- <li><a href="/">Post Inicial</a></li> -->
+                </ul>
+              </div>
+            </div>
+
+            <div flex layout="column" layout-align="start center">
+              <div class="widget widget-address">
+                <h3 class="title">{{ 'contact.title' | translate }}</h3>
+                <address layout="column" class="md-body-1">
+                  <span>
+                    {{ 'contact.addressContent' | translate }}
+                  </span>
+                  <span><strong>{{ 'contact.phone' | translate }}:</strong>
+                    <a href="call:+5502198364-6683">+55 (021) 98364-6683</a>
+                  </span>
+                  <span><strong>{{ 'contact.email' | translate }}:</strong>
+                    <a href="mailto:contact@bookingadventure.com.br">contact@bookingadventure.com.br</a>
+                  </span>
+                </address>
+              </div>
+            </div>
+          </div>
+          <div class="bottom" layout="row">
+            <div class="container">
+              <span class="md-caption">Copyright &copy; {{appName}} {{ today | date : "yyyy" }}</span>
+              <!-- <ul class="list-inline social-buttons">
+                <li><a target="_blank" href="http://gplus.to/"><i class="fa fa-google-plus-sign"></i></a></li>
+                <li><a target="_blank" href="http://twitter.com/"><i class="fa fa-twitter-sign"></i></a></li>
+                <li><a target="_blank" href="http://linkedin.com/"><i class="fa fa-linkedin-sign"></i></a></li>
+                <li><a target="_blank" href="http://github.com/"><i class="fa fa-github-sign"></i></a></li>
+              </ul> -->
+            </div>
+          </div>
+        </footer>
+      </md-content>
+
+    </div>
+
+
+    <!-- compiled JavaScript -->
+    <script type="text/javascript" src="assets/bookingadventure-0.0.1.js"></script>
+
+  </body>
+</html>

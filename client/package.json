@@ -7,8 +7,8 @@
     "postinstall": "bower install & grunt build",
     "start": "http-server -a localhost -p 8000 -c-1 ./build"
   },
-  "dependencies": {},
   "devDependencies": {
+    "bower": "1.7.9",
     "grunt": "~0.4.1",
     "grunt-bump": "0.0.6",
     "grunt-coffeelint": "~0.0.10",
