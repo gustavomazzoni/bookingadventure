@@ -20,18 +20,18 @@
       }
     </style>
   </head>
-  <body ng-cloak>
+  <body ng-cloak class="main" layout="column">
     <div layout="column" layout-fill>
 
       <!-- Navigation -->
-      <md-toolbar class="main-nav" ng-cloak>
+      <md-toolbar class="main-nav">
         <div class="md-toolbar-tools">
           <!--
           <md-button class="menu" hide-gt-sm ng-click="vm.toggleSide()" aria-label="Toggle Side Menu">
             <md-icon md-font-library="material-icons" alt="Show Side Menu">menu</md-icon>
           </md-button>
           -->
-          <h1 class="app-name">
+          <h1 layout-align-xs="center" class="app-name">
             <a href="/" ng-cloak>
               <span>{{appName}}</span>
             </a>
@@ -63,20 +63,20 @@
           </ul>
         </div>
       </md-toolbar>
-      <md-content id="content" flex layout="column" layout-fill>
-        <div class="main-content" ui-view="main" ng-cloak></div>
+      <md-content id="content" layout-fill>
+        <div class="main-content" flex="1" ui-view="main"></div>
 
-        <footer ng-cloak>
+        <footer class="main-footer">
           <div class="section-padding" layout-xs="column" layout="row" layout-padding>
             <div flex layout="column" layout-align="start center">
-              <div class="widget widget-aboutus" ng-cloak>
+              <div class="widget widget-aboutus">
                 <h3 class="title">{{ 'aboutUs.title' | translate }}</h3>
                 <p class="md-body-1">{{ 'aboutUs.description' | translate }}</p>
               </div>
             </div>
 
             <div flex layout="column" layout-align="start center">
-              <div class="widget widget-recentpost" ng-cloak>
+              <div class="widget widget-recentpost">
                 <h3 class="title">{{ 'blog.title' | translate }}</h3>
                 <ul class="md-body-1">
                   <!-- <li><a href="/">Post Inicial</a></li> -->
@@ -85,7 +85,7 @@
             </div>
 
             <div flex layout="column" layout-align="start center">
-              <div class="widget widget-address" ng-cloak>
+              <div class="widget widget-address">
                 <h3 class="title">{{ 'contact.title' | translate }}</h3>
                 <address layout="column" class="md-body-1">
                   <span>
@@ -102,7 +102,7 @@
             </div>
           </div>
           <div class="bottom" layout="row">
-            <div class="container" ng-cloak>
+            <div class="container">
               <span class="md-caption">Copyright &copy; {{appName}} {{ today | date : "yyyy" }}</span>
               <!-- <ul class="list-inline social-buttons">
                 <li><a target="_blank" href="http://gplus.to/"><i class="fa fa-google-plus-sign"></i></a></li>
