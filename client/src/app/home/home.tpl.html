@@ -180,25 +180,25 @@
     </div>
   </div>
   <div layout="row" layout-align="center center" layout-fill flex="1">
-    <form name="providersForm" ng-submit="" layout="column" flex="100" flex-sm="70" flex-gt-sm="50" 
+    <form name="providersForm" ng-submit="" layout="column" flex-xs="100" flex-sm="70" flex="50" 
       layout-margin aria-label="Providers Form" novalidate>
       <div>
         <h3 class="title text-center">{{"providers.form.title" | translate}}</h3>
       </div>
-      <div layout-gt-xs="row" layout-wrap>
-        <md-input-container class="md-block" flex-gt-xs="50">
+      <div layout="row" layout-xs="column" layout-wrap>
+        <md-input-container class="md-block" flex="50" flex-xs="100">
           <label>{{"providers.form.firstName" | translate}}</label>
           <input ng-model="vm.provider.firstName">
         </md-input-container>
-        <md-input-container class="md-block" flex-gt-xs="50">
+        <md-input-container class="md-block" flex="50" flex-xs="100">
           <label>{{"providers.form.lastName" | translate}}</label>
           <input ng-model="vm.provider.lastName">
         </md-input-container>
-        <md-input-container class="md-block" flex-gt-xs="50">
+        <md-input-container class="md-block" flex="50" flex-xs="100">
           <label>{{"providers.form.phone" | translate}}</label>
           <input type="tel" ng-model="vm.provider.phone">
         </md-input-container>
-        <md-input-container class="md-block" flex-gt-xs="50">
+        <md-input-container class="md-block" flex="50" flex-xs="100">
           <label>{{"providers.form.city" | translate}}</label>
           <input ng-model="vm.provider.city">
         </md-input-container>
