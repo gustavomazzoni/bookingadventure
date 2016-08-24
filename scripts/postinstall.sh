@@ -1,3 +1,3 @@
-cd client && bower install && grunt build && cd ..
+cd client && npm install && cd ..
 
 cd server && npm install
