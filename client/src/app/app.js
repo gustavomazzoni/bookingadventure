@@ -33,8 +33,11 @@ angular.module( 'bookingadventure', [
   //   .accentPalette('orange');
 }])
 
-.config(['$stateProvider', '$urlRouterProvider', function myAppConfig ( $stateProvider, $urlRouterProvider ) {
-  $urlRouterProvider.otherwise( '/' );
+.config(['$locationProvider', '$urlRouterProvider', function myAppConfig ( $locationProvider, $urlRouterProvider ) {
+  // For any unmatched url, 
+  $urlRouterProvider.otherwise('/');
+  // use the HTML5 History API so we can remove # (hashtag) from the URL
+  $locationProvider.html5Mode(true).hashPrefix('!');
 }])
 
 .run( ['$locale', '$translate', function run ($locale, $translate) {
