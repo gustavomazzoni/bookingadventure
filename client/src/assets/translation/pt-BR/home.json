@@ -68,7 +68,8 @@
 		"form": {
 			"title": "Junte-se a nossa comunidade de aventureiros!",
 			"description": "Cadastre-se e você será informado sobre o lançamento do BookingAdventure.",
-			"name": "Nome completo",
+			"firstName": "Primeiro nome",
+			"lastName": "Sobrenome",
 			"email": "Email",
 			"button": "Cadastre-se"
 		}
