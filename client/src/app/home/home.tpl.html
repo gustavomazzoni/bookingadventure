@@ -127,22 +127,28 @@
       </md-list>
     </div>
     <div flex>
-      <form name="adventurersForm" ng-submit="" layout="column" md-whiteframe="1" class="md-padding bg-white"
-        aria-label="Adventurers Form" novalidate>
+      <gm-mailchimp-form layout="column" ng-model="vm.adventurer" config="vm.adventuresMailChimp"
+        md-whiteframe="1" class="md-padding bg-white" novalidate>
         <div>
           <h3 class="title text-center">{{"adventurers.form.title" | translate}}</h3>
           <p class="description text-center">{{"adventurers.form.description" | translate}}</p>
         </div>
-        <md-input-container>
-          <label>{{"adventurers.form.name" | translate}}</label>
-          <input ng-model="vm.adventurer.name">
-        </md-input-container>
+        <div layout="row" layout-xs="column" layout-wrap>
+          <md-input-container class="md-block" flex="50" flex-xs="100">
+            <label>{{"adventurers.form.firstName" | translate}}</label>
+            <input ng-model="vm.adventurer.firstName">
+          </md-input-container>
+          <md-input-container class="md-block" flex="50" flex-xs="100">
+            <label>{{"adventurers.form.lastName" | translate}}</label>
+            <input ng-model="vm.adventurer.lastName">
+          </md-input-container>
+        </div>
         <md-input-container>
           <label>{{"adventurers.form.email" | translate}}</label>
           <input type="email" ng-model="vm.adventurer.email">
         </md-input-container>
         <md-button type="submit" class="md-raised md-primary">{{"adventurers.form.button" | translate}}</md-button>
-      </form>
+      </gm-mailchimp-form>
     </div>
   </div>
 </section>

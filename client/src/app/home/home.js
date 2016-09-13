@@ -15,7 +15,8 @@
 angular.module( 'bookingadventure.home', [
   'ui.router',
   'pascalprecht.translate',
-  'bookingadventure.services'
+  'bookingadventure.services',
+  'mailchimp'
 ])
 
 /**
@@ -67,5 +68,11 @@ angular.module( 'bookingadventure.home', [
   vm.popularAdventures = popularList;
   vm.deals = dealsList;
   vm.places = placesList;
+
+  vm.adventuresMailChimp = {
+    basicAuth: 'ba:e1855aca2180a4e6cec619c4b9044397-us14',
+    dc: 'us14',
+    listId: '0b42fc5dde'
+  };
 }]);
 

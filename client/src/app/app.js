@@ -40,9 +40,9 @@ angular.module( 'bookingadventure', [
   $locationProvider.html5Mode(true).hashPrefix('!');
 }])
 
-.run( ['$locale', '$translate', function run ($locale, $translate) {
+.run( ['$window', '$translate', function run ($window, $translate) {
   // set user locale to translate texts
-  $translate.use($locale.localeID);
+  $translate.use($window.navigator.language);
 }])
 
 .constant('USER_ROLES', {
