@@ -6,18 +6,18 @@
   * @example <gm-mailchimp-form></gm-mailchimp-form>
   */
   angular
-    .module('mailchimp', [])
+    .module('gm.mailchimp', [])
     .config(config)
     .directive('gmMailchimpForm', gmMailchimpForm);
 
   config.$inject = ['$httpProvider'];
   function config($httpProvider) {
-    $httpProvider.defaults.useXDomain = true;
-    $httpProvider.defaults.withCredentials = true;
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    $httpProvider.defaults.headers.common['Accept'] = 'application/json';
-    $httpProvider.defaults.headers.common['Content-Type'] = 'application/json';
-    $httpProvider.defaults.headers.common = {"Access-Control-Request-Headers": "accept, origin, authorization"}; //This lets us connect to a server on a different domain
+    // $httpProvider.defaults.useXDomain = true;
+    // $httpProvider.defaults.withCredentials = true;
+    // delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    // $httpProvider.defaults.headers.common['Accept'] = 'application/json';
+    // $httpProvider.defaults.headers.common['Content-Type'] = 'text/plain';
+    // $httpProvider.defaults.headers.common = {"Access-Control-Request-Headers": "accept, origin, authorization"}; //This lets us connect to a server on a different domain
     // Access-Control-Allow-Origin
   }
 

@@ -70,7 +70,10 @@ module.exports = {
       'vendor/angular-aria/angular-aria.js',
       'vendor/angular-animate/angular-animate.js',
       'vendor/angular-material/angular-material.js',
-      'vendor/angular-scroll/angular-scroll.min.js'
+      'vendor/angular-scroll/angular-scroll.min.js',
+      'vendor/angular-mailchimp/angular-mailchimp.js',
+      'vendor/angular-resource/angular-resource.min.js',
+      'vendor/angular-sanitize/angular-sanitize.min.js'
     ],
     css: [
       'vendor/angular-material/angular-material.min.css'

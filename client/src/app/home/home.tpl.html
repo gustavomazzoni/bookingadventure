@@ -127,7 +127,44 @@
       </md-list>
     </div>
     <div flex>
-      <gm-mailchimp-form layout="column" ng-model="vm.adventurer" config="vm.adventuresMailChimp"
+      <form name="MailchimpSubscriptionForm" ng-submit="addSubscription(vm.adventuresMailChimp)" 
+        ng-controller="MailchimpSubscriptionCtrl" layout="column" md-whiteframe="1" 
+          class="md-padding bg-white" novalidate>
+        <div>
+          <h3 class="title text-center">{{"adventurers.form.title" | translate}}</h3>
+          <p class="description text-center">{{"adventurers.form.description" | translate}}</p>
+        </div>
+
+        <div layout="row" layout-xs="column" layout-wrap>
+          <md-input-container class="md-block" flex="50" flex-xs="100">
+            <label>{{"adventurers.form.firstName" | translate}}</label>
+            <input name="fname" ng-model="vm.adventuresMailChimp.FNAME">
+          </md-input-container>
+          <md-input-container class="md-block" flex="50" flex-xs="100">
+            <label>{{"adventurers.form.lastName" | translate}}</label>
+            <input name="lname" ng-model="vm.adventuresMailChimp.LNAME">
+          </md-input-container>
+        </div>
+        <md-input-container>
+          <label>{{"adventurers.form.email" | translate}}</label>
+          <input type="email" name="email" ng-model="vm.adventuresMailChimp.EMAIL" required>
+        </md-input-container>
+        <md-button type="submit" ng-disabled="MailchimpSubscriptionForm.$invalid" class="md-raised md-primary">{{"adventurers.form.button" | translate}}</md-button>
+        
+        <!-- Show error message if MailChimp didn't add the email to the list. -->
+        <div layout="row" ng-show="vm.adventuresMailChimp.result === 'error'" class="md-body-1 bg-error layout-margin" ng-cloak>
+          <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Problem">error</md-icon>
+          <span ng-bind-html="vm.adventuresMailChimp.errorMessage"></span>
+        </div>
+
+        <!-- Show success message if MailChimp added email to the list successfully. -->
+        <div layout="row" ng-show="vm.adventuresMailChimp.result === 'success'" class="md-body-1 bg-success layout-margin" ng-cloak>
+          <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Success">check_circle</md-icon>
+          <span ng-bind-html="vm.adventuresMailChimp.successMessage"></span>
+        </div>
+      </form>
+
+      <!-- <gm-mailchimp-form layout="column" ng-model="vm.adventurer" config="vm.adventuresMailChimp"
         md-whiteframe="1" class="md-padding bg-white" novalidate>
         <div>
           <h3 class="title text-center">{{"adventurers.form.title" | translate}}</h3>
@@ -145,10 +182,11 @@
         </div>
         <md-input-container>
           <label>{{"adventurers.form.email" | translate}}</label>
-          <input type="email" ng-model="vm.adventurer.email">
+          <input type="email" ng-model="vm.adventurer.email_address">
+          <input type="hidden" ng-model="vm.adventurer.status" value="subscribed">
         </md-input-container>
         <md-button type="submit" class="md-raised md-primary">{{"adventurers.form.button" | translate}}</md-button>
-      </gm-mailchimp-form>
+      </gm-mailchimp-form> -->
     </div>
   </div>
 </section>
@@ -186,7 +224,51 @@
     </div>
   </div>
   <div layout="row" layout-align="center center" layout-fill flex="1">
-    <form name="providersForm" ng-submit="" layout="column" flex-xs="100" flex-sm="70" flex="50" 
+    <form name="MailchimpSubscriptionForm" ng-submit="addSubscription(vm.providersMailChimp)" 
+      ng-controller="MailchimpSubscriptionCtrl" layout="column" flex-xs="100" flex-sm="70" flex="50" 
+      layout-margin aria-label="Providers Form" novalidate>
+      <div>
+        <h3 class="title text-center">{{"providers.form.title" | translate}}</h3>
+      </div>
+
+      <div layout="row" layout-xs="column" layout-wrap>
+        <md-input-container class="md-block" flex="50" flex-xs="100">
+          <label>{{"providers.form.firstName" | translate}}</label>
+          <input ng-model="vm.providersMailChimp.FNAME">
+        </md-input-container>
+        <md-input-container class="md-block" flex="50" flex-xs="100">
+          <label>{{"providers.form.lastName" | translate}}</label>
+          <input ng-model="vm.providersMailChimp.LNAME">
+        </md-input-container>
+        <md-input-container class="md-block" flex="50" flex-xs="100">
+          <label>{{"providers.form.phone" | translate}}</label>
+          <input type="tel" ng-model="vm.providersMailChimp.PHONE">
+        </md-input-container>
+        <md-input-container class="md-block" flex="50" flex-xs="100">
+          <label>{{"providers.form.city" | translate}}</label>
+          <input ng-model="vm.providersMailChimp.CITY">
+        </md-input-container>
+      </div>
+      <md-input-container>
+        <label>{{"providers.form.email" | translate}}</label>
+        <input type="email" name="email" ng-model="vm.providersMailChimp.EMAIL" required>
+      </md-input-container>
+      <md-button type="submit" ng-disabled="MailchimpSubscriptionForm.$invalid" class="md-raised md-primary">{{"providers.form.button" | translate}}</md-button>
+      
+      <!-- Show error message if MailChimp didn't add the email to the list. -->
+      <div layout="row" ng-show="vm.providersMailChimp.result === 'error'" class="md-body-1 bg-error layout-margin" ng-cloak>
+        <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Problem">error</md-icon>
+        <span ng-bind-html="vm.providersMailChimp.errorMessage"></span>
+      </div>
+
+      <!-- Show success message if MailChimp added email to the list successfully. -->
+      <div layout="row" ng-show="vm.providersMailChimp.result === 'success'" class="md-body-1 bg-success layout-margin" ng-cloak>
+        <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Success">check_circle</md-icon>
+        <span ng-bind-html="vm.providersMailChimp.successMessage"></span>
+      </div>
+    </form>
+
+    <!-- <form name="providersForm" ng-submit="" layout="column" flex-xs="100" flex-sm="70" flex="50" 
       layout-margin aria-label="Providers Form" novalidate>
       <div>
         <h3 class="title text-center">{{"providers.form.title" | translate}}</h3>
@@ -214,7 +296,7 @@
         <input type="email" ng-model="vm.provider.email">
       </md-input-container>
       <md-button type="submit" class="md-raised md-primary">{{"providers.form.button" | translate}}</md-button>
-    </form>
+    </form> -->
   </div>
 </section>
 

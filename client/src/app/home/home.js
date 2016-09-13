@@ -62,17 +62,43 @@ angular.module( 'bookingadventure.home', [
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', ['popularList', 'dealsList', 'placesList', 
-  function HomeController( popularList, dealsList, placesList ) {
+.controller( 'HomeCtrl', HomeController);
+
+HomeController.$inject = ['$scope', 'popularList', 'dealsList', 'placesList'];
+function HomeController( $scope, popularList, dealsList, placesList ) {
   var vm = this;
   vm.popularAdventures = popularList;
   vm.deals = dealsList;
   vm.places = placesList;
 
-  vm.adventuresMailChimp = {
-    basicAuth: 'ba:e1855aca2180a4e6cec619c4b9044397-us14',
-    dc: 'us14',
-    listId: '0b42fc5dde'
-  };
-}]);
+  function initMailChimp() {
+    vm.adventuresMailChimp = vm.adventuresMailChimp || {};
+    vm.adventuresMailChimp.dc = 'us14';
+    vm.adventuresMailChimp.username = 'bookingadventure';
+    vm.adventuresMailChimp.u = '8151bfe84e709034b416ad844';
+    vm.adventuresMailChimp.id = '0b42fc5dde';
+    vm.adventuresMailChimp.EMAIL = null;
+    vm.adventuresMailChimp.FNAME = null;
+    vm.adventuresMailChimp.LNAME = null;
+
+    vm.providersMailChimp = vm.providersMailChimp || {};
+    vm.providersMailChimp.dc = 'us14';
+    vm.providersMailChimp.username = 'bookingadventure';
+    vm.providersMailChimp.u = '8151bfe84e709034b416ad844';
+    vm.providersMailChimp.id = 'c46262748e';
+    vm.providersMailChimp.EMAIL = null;
+    vm.providersMailChimp.FNAME = null;
+    vm.providersMailChimp.LNAME = null;
+    vm.providersMailChimp.PHONE = null;
+    vm.providersMailChimp.CITY = null;
+  }
+
+  initMailChimp();
+
+  $scope.$on('mailchimp-response', function(obj, result, msg) {
+    if (result === 'success') {
+      initMailChimp();
+    }
+  });
+}
 

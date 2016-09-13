@@ -10,6 +10,7 @@
     "angular-translate": "^2.11.0",
     "angular-translate-loader-partial": "^2.11.0",
     "angular-material": "^1.0.9",
-    "angular-scroll": "^1.0.0"
+    "angular-scroll": "^1.0.0",
+    "angular-mailchimp": "^0.0.4"
   }
 }
