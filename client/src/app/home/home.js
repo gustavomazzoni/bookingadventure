@@ -64,8 +64,8 @@ angular.module( 'bookingadventure.home', [
  */
 .controller( 'HomeCtrl', HomeController);
 
-HomeController.$inject = ['$scope', 'popularList', 'dealsList', 'placesList'];
-function HomeController( $scope, popularList, dealsList, placesList ) {
+HomeController.$inject = ['$scope', 'popularList', 'dealsList', 'placesList', '$document'];
+function HomeController( $scope, popularList, dealsList, placesList, $document ) {
   var vm = this;
   vm.popularAdventures = popularList;
   vm.deals = dealsList;
@@ -97,7 +97,10 @@ function HomeController( $scope, popularList, dealsList, placesList ) {
 
   $scope.$on('mailchimp-response', function(obj, result, msg) {
     if (result === 'success') {
-      initMailChimp();
+      var forms = $document.find('form');
+      for (var i = 0, l = forms.length; i < l; i++) {
+        forms[i].reset();
+      }
     }
   });
 }
