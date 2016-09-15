@@ -2,26 +2,26 @@
 	"title": "Home",
 	"headline": {
 		"title": "Reserve sua próxima Aventura",
-		"description": "Agora você está no lugar certo para encontrar e reservar sua próxima grande aventura!"
+		"description": "Você está no lugar certo para encontrar e reservar sua próxima grande aventura!"
 	},
 	"what": {
 		"title": "Nós iremos conectar você às mais incríveis aventuras",
 		"description": "BookingAdventure é um portal que reúne atividades de aventura ao ar livre de todos os tipos e níveis proporcionadas por profissionais capacitados prontos para prover uma grande experiência.",
 		"item1": {
 			"title": "Faça o que ama",
-			"description": "Através do BookingAdventure você terá acesso a novos lugares paradisíacos para praticar o esporte que você ama."
+			"description": "Através do BookingAdventure você terá acesso a novos lugares paradisíacos para praticar o que você ama."
 		},
 		"item2": {
 			"title": "Comunidade",
-			"description": "Junte-se a uma comunidade de aventureiros igual a você, receba histórias, dicas e críticas a respeito das aventuras e, como resultado, tenha poder de decisão para escolher sua próxima grande aventura."
+			"description": "Junte-se a uma comunidade de aventureiros, receba histórias, dicas e críticas a respeito das aventuras e tenha poder de decisão para escolher sua próxima aventura."
 		},
 		"item3": {
 			"title": "Segurança",
-			"description": "BookingAdventure exige que cada aventura possua kit de segurança ..."
+			"description": "Segurança em primeiro lugar! O BookingAdventure exige que todos os provedores fornecam os equipamentos de segurança necessários para cada atividade."
 		},
 		"item4": {
 			"title": "Garantia",
-			"description": "Reserver e pague pela sua aventura diretamente no BookingAdventure. Se você não ficar satisfeito com a experiência nós devolvemos o seu dinheiro."
+			"description": "Nós queremos ter certeza de que você terá o que você comprou. Reservando e pagando pelo BookingAdventure, você terá o seu dinheiro de volta caso isto não aconteça."
 		}
 	},
 	"belief": {
@@ -32,19 +32,19 @@
 		"description": "",
 		"item1": {
 			"title": "Explore",
-			"description": "Navegue pelos tipos de aventura que você mais gosta e utilize os filtros para encontrar a sua próxima grande aventura."
+			"description": "Navegue pelos tipos de aventura que você mais gosta e utilize os filtros para encontrar a sua próxima aventura."
 		},
 		"item2": {
 			"title": "Reserve",
-			"description": "Escolha (o) dia(s) para realização da aventura, agende e pague diretamente pelo BookingAdventure."
+			"description": "Escolha a data para realização da aventura, agende e pague diretamente pelo BookingAdventure."
 		},
 		"item3": {
 			"title": "Prepare-se",
-			"description": "Cada aventura possui exigências por parte do aventureiro para que esteja preparado para realizar as atividades durante a aventura."
+			"description": "Cada aventura possui exigências por parte do aventureiro. Nós informaremos o que você precisará levar para realizar as atividades."
 		},
 		"item4": {
 			"title": "Viva",
-			"description": "Chegou o dia. Siga as instruções definidas pelo especialista para início da aventura e viva essa grande experiência!"
+			"description": "Chegou o dia. Siga as instruções definidas para início da aventura e viva essa grande experiência!"
 		}
 	},
 	"adventurers": {
@@ -55,7 +55,7 @@
 		},
 		"item2": {
 			"title": "Descubra o mundo",
-			"description": "Vá para a natureza, explore e descubra novos lugares paradisíacos que a natureza nos provê."
+			"description": "Explore a natureza, descubra e vivencie novos lugares."
 		},
 		"item3": {
 			"title": "Pratique esportes",
@@ -63,7 +63,7 @@
 		},
 		"item4": {
 			"title": "Colecione memórias de vida",
-			"description": "Volte com o mais valioso item, Memórias de Vida, e várias histórias para contar."
+			"description": "E volte cheio de histórias para contar."
 		},
 		"form": {
 			"title": "Junte-se a nossa comunidade de aventureiros!",
@@ -74,24 +74,28 @@
 			"button": "Cadastre-se"
 		}
 	},
+	"mailchimp": {
+		"success": "Ótimo! Antes de concluir, precisamos confirmar seu endereço de email. Para completar o cadastro, clique no link do email que acabamos de lhe enviar.",
+		"error": ""
+	},
 	"providers": {
 		"title": "Quer fazer parte da nossa comunidade de Provedores Profissionais?",
 		"description": "Você é apaixonado pelo que faz e está pronto para prover experiências incríveis para os nossos aventureiros?",
 		"item1": {
 			"title": "Custo ZERO",
-			"description": "Sem custo para listas as suas aventuras no BookingAdventure. Você só paga uma taxa quando fazer uma venda."
+			"description": "Sem custo para listar os seus serviços no BookingAdventure. Você só paga uma comissão quando fizer a venda."
 		},
 		"item2": {
 			"title": "Mais clientes",
-			"description": "Nós iremos promover as suas aventuras ..."
+			"description": "Tenha mais visibilidade! Nós iremos promover as suas aventuras em vários canais de comunicação no Brasil e no mundo."
 		},
 		"item3": {
 			"title": "Gerenciamento",
 			"description": "Com as ferramentas do BookingAdventure você poderá gerenciar suas reservas e pagamentos de qualquer lugar."
 		},
 		"item4": {
-			"title": "Time de Suporte",
-			"description": "Nós estamos aqui para lhe ajudar quando você precisar."
+			"title": "Time de suporte",
+			"description": "Nós estamos aqui para lhe ajudar quando você precisar. Conte conosco!"
 		},
 		"form": {
 			"title": "Vá em frente. Preencha o formulário abaixo e nós entraremos em contato.",
@@ -104,20 +108,20 @@
 		}
 	},
 	"mostPopular": {
-		"title": "Most Popular"
+		"title": "Mais Populares"
 	},
 	"deals": {
-		"title": "Deals"
+		"title": "Ofertas"
 	},
 	"discoverPlaces": {
-		"title": "Discover Places"
+		"title": "Descubra Lugares"
 	},
 	"discoverActivities": {
-		"title": "Discover Activities"
+		"title": "Descubra Atividades"
 	},
 	"newsletter": {
-		"title": "Join the Newsletter",
+		"title": "Assine nossa Newsletter",
 		"email": "Email",
-		"subscribe": "Subscribe"
+		"subscribe": "Assinar"
 	}
 }

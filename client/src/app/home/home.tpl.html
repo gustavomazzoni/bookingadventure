@@ -71,13 +71,13 @@
     </div>
 
     <div flex>
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">directions_run</md-icon>
+      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">playlist_add_check</md-icon>
       <h3 class="title">{{"howItWorks.item3.title" | translate}}</h3>
       <p class="description md-body-1">{{"howItWorks.item3.description" | translate}}</p>
     </div>
 
     <div flex>
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">tag_faces</md-icon>
+      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">directions_run</md-icon>
       <h3 class="title">{{"howItWorks.item4.title" | translate}}</h3>
       <p class="description md-body-1">{{"howItWorks.item4.description" | translate}}</p>
     </div>
@@ -160,7 +160,7 @@
         <!-- Show success message if MailChimp added email to the list successfully. -->
         <div layout="row" ng-show="vm.adventuresMailChimp.result === 'success'" class="md-body-1 bg-success layout-margin" ng-cloak>
           <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Success">check_circle</md-icon>
-          <span ng-bind-html="vm.adventuresMailChimp.successMessage"></span>
+          <span>{{"mailchimp.success" | translate}}</span>
         </div>
       </form>
 
@@ -264,7 +264,7 @@
       <!-- Show success message if MailChimp added email to the list successfully. -->
       <div layout="row" ng-show="vm.providersMailChimp.result === 'success'" class="md-body-1 bg-success layout-margin" ng-cloak>
         <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Success">check_circle</md-icon>
-        <span ng-bind-html="vm.providersMailChimp.successMessage"></span>
+        <span>{{"mailchimp.success" | translate}}</span>
       </div>
     </form>
 
