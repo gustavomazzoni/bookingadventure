@@ -83,19 +83,19 @@
 		"description": "Are you passionate about what you do and willing to provide amazing experiences to our adventurers?",
 		"item1": {
 			"title": "Free",
-			"description": "No cost to list your adventures in BookingAdventure. You only pay a fee when you make a sale."
+			"description": "No cost to list your services on BookingAdventure. You only pay a fee when you make a sale."
 		},
 		"item2": {
-			"title": "More Customers",
-			"description": "BookingAdventure will promote your adventures ..."
+			"title": "More customers",
+			"description": "Be visible and get known! We will promote your adventurers in many social medias in Brazil and world."
 		},
 		"item3": {
 			"title": "Management",
 			"description": "With BookingAdventure tools you will be able to manage your bookings and payments wherever you are."
 		},
 		"item4": {
-			"title": "Support Team",
-			"description": "Whenever you need we are here to help you."
+			"title": "Support team",
+			"description": "Whenever you need we are here to help you. Count on us!"
 		},
 		"form": {
 			"title": "Go ahead! Fill out the form below and we will get back to you.",
