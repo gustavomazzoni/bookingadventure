@@ -1,322 +1,324 @@
+<div class="home">
 
-<header class="header background-image">
-  <div class="jumbotron" layout="column" layout-padding layout-align="center center">
-    <h1 class="headline">{{"headline.title" | translate}}</h1>
-    <p class="lead">
-      {{"headline.description" | translate}}
-    </p>
-  </div>
-</header>
+  <header class="header background-image">
+    <div class="jumbotron" layout="column" layout-padding layout-align="center center">
+      <h1 class="headline">{{"headline.title" | translate}}</h1>
+      <p class="lead">
+        {{"headline.description" | translate}}
+      </p>
+    </div>
+  </header>
 
-<section id="what_is" layout="column" class="section-padding">
-  <div class="row-space-6" layout="row">
+  <section id="what_is" layout="column" class="section-padding">
+    <div class="row-space-6" layout="row">
+      <div flex="66" flex-offset="15" layout="column" class="text-center">
+        <h1 class="page-header">
+          {{"what.title" | translate}}
+        </h1>
+        <p class="description">{{"what.description" | translate}}</p>
+      </div>
+    </div>
+    <div layout-xs="column" layout="row" layout-padding class="features text-center">
+      <div flex class="feature">
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">favorite</md-icon>
+        <h3 class="title">{{"what.item1.title" | translate}}</h3>
+        <p class="description md-body-1">{{"what.item1.description" | translate}}</p>
+      </div>
+
+      <div flex class="feature">
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">group</md-icon>
+        <h3 class="title">{{"what.item2.title" | translate}}</h3>
+        <p class="description md-body-1">{{"what.item2.description" | translate}}</p>
+      </div>
+
+      <div flex class="feature">
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">security</md-icon>
+        <h3 class="title">{{"what.item3.title" | translate}}</h3>
+        <p class="description md-body-1">{{"what.item3.description" | translate}}</p>
+      </div>
+
+      <div flex class="feature">
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">sync</md-icon>
+        <h3 class="title">{{"what.item4.title" | translate}}</h3>
+        <p class="description md-body-1">{{"what.item4.description" | translate}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section layout="row" layout-padding class="section-padding bg-blue">
     <div flex="66" flex-offset="15" layout="column" class="text-center">
+      <h1>{{"belief.title" | translate}}</h1>
+    </div>
+  </section>
+
+  <section id="how_it_works" layout="column" class="section-padding">
+    <div class="text-center">
       <h1 class="page-header">
-        {{"what.title" | translate}}
+        {{"howItWorks.title" | translate}}
       </h1>
-      <p class="description">{{"what.description" | translate}}</p>
+      <p>{{"howItWorks.description" | translate}}</p>
     </div>
-  </div>
-  <div layout-xs="column" layout="row" layout-padding class="features text-center">
-    <div flex class="feature">
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">favorite</md-icon>
-      <h3 class="title">{{"what.item1.title" | translate}}</h3>
-      <p class="description md-body-1">{{"what.item1.description" | translate}}</p>
+    <div layout-xs="column" layout="row" layout-padding class="text-center">
+      <div flex>
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">explore</md-icon>
+        <h3 class="title">{{"howItWorks.item1.title" | translate}}</h3>
+        <p class="description md-body-1">{{"howItWorks.item1.description" | translate}}</p>
+      </div>
+
+      <div flex>
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">event</md-icon>
+        <h3 class="title">{{"howItWorks.item2.title" | translate}}</h3>
+        <p class="description md-body-1">{{"howItWorks.item2.description" | translate}}</p>
+      </div>
+
+      <div flex>
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">playlist_add_check</md-icon>
+        <h3 class="title">{{"howItWorks.item3.title" | translate}}</h3>
+        <p class="description md-body-1">{{"howItWorks.item3.description" | translate}}</p>
+      </div>
+
+      <div flex>
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">directions_run</md-icon>
+        <h3 class="title">{{"howItWorks.item4.title" | translate}}</h3>
+        <p class="description md-body-1">{{"howItWorks.item4.description" | translate}}</p>
+      </div>
     </div>
+  </section>
 
-    <div flex class="feature">
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">group</md-icon>
-      <h3 class="title">{{"what.item2.title" | translate}}</h3>
-      <p class="description md-body-1">{{"what.item2.description" | translate}}</p>
+  <section id="adventurers" layout="column" class="section-padding bg-lightgray" layout-padding layout-align="center center">
+    <div class="row-space-2">
+      <h1 class="page-header">
+        {{"adventurers.title" | translate}}
+      </h1>
     </div>
+    <div layout-xs="column" layout="row" layout-padding>
+      <div flex layout="column" class="features">
+        <md-list>
+          <md-list-item class="md-2-line">
+            <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">flight_takeoff</md-icon>
+            <div class="md-list-item-text">
+              <h3>{{"adventurers.item1.title" | translate}}</h3>
+              <p>{{"adventurers.item1.description" | translate}}</p>
+            </div>
+          </md-list-item>
 
-    <div flex class="feature">
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">security</md-icon>
-      <h3 class="title">{{"what.item3.title" | translate}}</h3>
-      <p class="description md-body-1">{{"what.item3.description" | translate}}</p>
-    </div>
+          <md-list-item class="md-2-line">
+            <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">public</md-icon>
+            <div class="md-list-item-text">
+              <h3>{{"adventurers.item2.title" | translate}}</h3>
+              <p>{{"adventurers.item2.description" | translate}}</p>
+            </div>
+          </md-list-item>
 
-    <div flex class="feature">
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">sync</md-icon>
-      <h3 class="title">{{"what.item4.title" | translate}}</h3>
-      <p class="description md-body-1">{{"what.item4.description" | translate}}</p>
-    </div>
-  </div>
-</section>
+          <md-list-item class="md-2-line">
+            <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">directions_bike</md-icon>
+            <div class="md-list-item-text">
+              <h3>{{"adventurers.item3.title" | translate}}</h3>
+              <p>{{"adventurers.item3.description" | translate}}</p>
+            </div>
+          </md-list-item>
 
-<section layout="row" layout-padding class="section-padding bg-blue">
-  <div flex="66" flex-offset="15" layout="column" class="text-center">
-    <h1>{{"belief.title" | translate}}</h1>
-  </div>
-</section>
-
-<section id="how_it_works" layout="column" class="section-padding">
-  <div class="text-center">
-    <h1 class="page-header">
-      {{"howItWorks.title" | translate}}
-    </h1>
-    <p>{{"howItWorks.description" | translate}}</p>
-  </div>
-  <div layout-xs="column" layout="row" layout-padding class="text-center">
-    <div flex>
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">explore</md-icon>
-      <h3 class="title">{{"howItWorks.item1.title" | translate}}</h3>
-      <p class="description md-body-1">{{"howItWorks.item1.description" | translate}}</p>
-    </div>
-
-    <div flex>
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">event</md-icon>
-      <h3 class="title">{{"howItWorks.item2.title" | translate}}</h3>
-      <p class="description md-body-1">{{"howItWorks.item2.description" | translate}}</p>
-    </div>
-
-    <div flex>
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">playlist_add_check</md-icon>
-      <h3 class="title">{{"howItWorks.item3.title" | translate}}</h3>
-      <p class="description md-body-1">{{"howItWorks.item3.description" | translate}}</p>
-    </div>
-
-    <div flex>
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">directions_run</md-icon>
-      <h3 class="title">{{"howItWorks.item4.title" | translate}}</h3>
-      <p class="description md-body-1">{{"howItWorks.item4.description" | translate}}</p>
-    </div>
-  </div>
-</section>
-
-<section id="adventurers" layout="column" class="section-padding bg-lightgray" layout-padding layout-align="center center">
-  <div class="row-space-2">
-    <h1 class="page-header">
-      {{"adventurers.title" | translate}}
-    </h1>
-  </div>
-  <div layout-xs="column" layout="row" layout-padding>
-    <div flex layout="column" class="features">
-      <md-list>
-        <md-list-item class="md-2-line">
-          <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">flight_takeoff</md-icon>
-          <div class="md-list-item-text">
-            <h3>{{"adventurers.item1.title" | translate}}</h3>
-            <p>{{"adventurers.item1.description" | translate}}</p>
+          <md-list-item class="md-2-line">
+            <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">fingerprint</md-icon>
+            <div class="md-list-item-text">
+              <h3>{{"adventurers.item4.title" | translate}}</h3>
+              <p>{{"adventurers.item4.description" | translate}}</p>
+            </div>
+          </md-list-item>
+        </md-list>
+      </div>
+      <div flex>
+        <form name="MailchimpSubscriptionForm" ng-submit="addSubscription(vm.adventuresMailChimp)" 
+          ng-controller="MailchimpSubscriptionCtrl" layout="column" md-whiteframe="1" 
+            class="md-padding bg-white" novalidate>
+          <div>
+            <h3 class="title text-center">{{"adventurers.form.title" | translate}}</h3>
+            <p class="description text-center">{{"adventurers.form.description" | translate}}</p>
           </div>
-        </md-list-item>
 
-        <md-list-item class="md-2-line">
-          <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">public</md-icon>
-          <div class="md-list-item-text">
-            <h3>{{"adventurers.item2.title" | translate}}</h3>
-            <p>{{"adventurers.item2.description" | translate}}</p>
+          <div layout="row" layout-xs="column" layout-wrap>
+            <md-input-container class="md-block" flex="50" flex-xs="100">
+              <label>{{"adventurers.form.firstName" | translate}}</label>
+              <input name="fname" ng-model="vm.adventuresMailChimp.FNAME">
+            </md-input-container>
+            <md-input-container class="md-block" flex="50" flex-xs="100">
+              <label>{{"adventurers.form.lastName" | translate}}</label>
+              <input name="lname" ng-model="vm.adventuresMailChimp.LNAME">
+            </md-input-container>
           </div>
-        </md-list-item>
+          <md-input-container>
+            <label>{{"adventurers.form.email" | translate}}</label>
+            <input type="email" name="email" ng-model="vm.adventuresMailChimp.EMAIL" required>
+          </md-input-container>
+          <md-button type="submit" ng-disabled="MailchimpSubscriptionForm.$invalid" class="md-raised md-primary">{{"adventurers.form.button" | translate}}</md-button>
+          
+          <!-- Show error message if MailChimp didn't add the email to the list. -->
+          <div layout="row" ng-show="vm.adventuresMailChimp.result === 'error'" class="md-body-1 bg-error layout-margin" ng-cloak>
+            <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Problem">error</md-icon>
+            <span ng-bind-html="vm.adventuresMailChimp.errorMessage"></span>
+          </div>
 
-        <md-list-item class="md-2-line">
-          <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">directions_bike</md-icon>
-          <div class="md-list-item-text">
-            <h3>{{"adventurers.item3.title" | translate}}</h3>
-            <p>{{"adventurers.item3.description" | translate}}</p>
+          <!-- Show success message if MailChimp added email to the list successfully. -->
+          <div layout="row" ng-show="vm.adventuresMailChimp.result === 'success'" class="md-body-1 bg-success layout-margin" ng-cloak>
+            <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Success">check_circle</md-icon>
+            <span>{{"mailchimp.success" | translate}}</span>
           </div>
-        </md-list-item>
+        </form>
 
-        <md-list-item class="md-2-line">
-          <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">fingerprint</md-icon>
-          <div class="md-list-item-text">
-            <h3>{{"adventurers.item4.title" | translate}}</h3>
-            <p>{{"adventurers.item4.description" | translate}}</p>
+        <!-- <gm-mailchimp-form layout="column" ng-model="vm.adventurer" config="vm.adventuresMailChimp"
+          md-whiteframe="1" class="md-padding bg-white" novalidate>
+          <div>
+            <h3 class="title text-center">{{"adventurers.form.title" | translate}}</h3>
+            <p class="description text-center">{{"adventurers.form.description" | translate}}</p>
           </div>
-        </md-list-item>
-      </md-list>
+          <div layout="row" layout-xs="column" layout-wrap>
+            <md-input-container class="md-block" flex="50" flex-xs="100">
+              <label>{{"adventurers.form.firstName" | translate}}</label>
+              <input ng-model="vm.adventurer.firstName">
+            </md-input-container>
+            <md-input-container class="md-block" flex="50" flex-xs="100">
+              <label>{{"adventurers.form.lastName" | translate}}</label>
+              <input ng-model="vm.adventurer.lastName">
+            </md-input-container>
+          </div>
+          <md-input-container>
+            <label>{{"adventurers.form.email" | translate}}</label>
+            <input type="email" ng-model="vm.adventurer.email_address">
+            <input type="hidden" ng-model="vm.adventurer.status" value="subscribed">
+          </md-input-container>
+          <md-button type="submit" class="md-raised md-primary">{{"adventurers.form.button" | translate}}</md-button>
+        </gm-mailchimp-form> -->
+      </div>
     </div>
-    <div flex>
-      <form name="MailchimpSubscriptionForm" ng-submit="addSubscription(vm.adventuresMailChimp)" 
-        ng-controller="MailchimpSubscriptionCtrl" layout="column" md-whiteframe="1" 
-          class="md-padding bg-white" novalidate>
+  </section>
+
+  <section id="providers" layout="column" class="section-padding" layout-padding layout-align="center center">
+    <div>
+      <h1 class="page-header text-center">
+        {{"providers.title" | translate}}
+      </h1>
+      <p class="description text-center">{{"providers.description" | translate}}</p>
+    </div>
+    <div layout-xs="column" layout="row" layout-padding class="features text-center">
+      <div flex class="feature">
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">money_off</md-icon>
+        <h3 class="title">{{"providers.item1.title" | translate}}</h3>
+        <p class="description md-body-1">{{"providers.item1.description" | translate}}</p>
+      </div>
+
+      <div flex class="feature">
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">person_add</md-icon>
+        <h3 class="title">{{"providers.item2.title" | translate}}</h3>
+        <p class="description md-body-1">{{"providers.item2.description" | translate}}</p>
+      </div>
+
+      <div flex class="feature">
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">dvr</md-icon>
+        <h3 class="title">{{"providers.item3.title" | translate}}</h3>
+        <p class="description md-body-1">{{"providers.item3.description" | translate}}</p>
+      </div>
+
+      <div flex class="feature">
+        <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">supervisor_account</md-icon>
+        <h3 class="title">{{"providers.item4.title" | translate}}</h3>
+        <p class="description md-body-1">{{"providers.item4.description" | translate}}</p>
+      </div>
+    </div>
+    <div layout="row" layout-align="center center" layout-fill flex="1">
+      <form name="MailchimpSubscriptionForm" ng-submit="addSubscription(vm.providersMailChimp)" 
+        ng-controller="MailchimpSubscriptionCtrl" layout="column" flex-xs="100" flex-sm="70" flex="50" 
+        layout-margin aria-label="Providers Form" novalidate>
         <div>
-          <h3 class="title text-center">{{"adventurers.form.title" | translate}}</h3>
-          <p class="description text-center">{{"adventurers.form.description" | translate}}</p>
+          <h3 class="title text-center">{{"providers.form.title" | translate}}</h3>
         </div>
 
         <div layout="row" layout-xs="column" layout-wrap>
           <md-input-container class="md-block" flex="50" flex-xs="100">
-            <label>{{"adventurers.form.firstName" | translate}}</label>
-            <input name="fname" ng-model="vm.adventuresMailChimp.FNAME">
+            <label>{{"providers.form.firstName" | translate}}</label>
+            <input ng-model="vm.providersMailChimp.FNAME">
           </md-input-container>
           <md-input-container class="md-block" flex="50" flex-xs="100">
-            <label>{{"adventurers.form.lastName" | translate}}</label>
-            <input name="lname" ng-model="vm.adventuresMailChimp.LNAME">
+            <label>{{"providers.form.lastName" | translate}}</label>
+            <input ng-model="vm.providersMailChimp.LNAME">
+          </md-input-container>
+          <md-input-container class="md-block" flex="50" flex-xs="100">
+            <label>{{"providers.form.phone" | translate}}</label>
+            <input type="tel" ng-model="vm.providersMailChimp.PHONE">
+          </md-input-container>
+          <md-input-container class="md-block" flex="50" flex-xs="100">
+            <label>{{"providers.form.city" | translate}}</label>
+            <input ng-model="vm.providersMailChimp.CITY">
           </md-input-container>
         </div>
         <md-input-container>
-          <label>{{"adventurers.form.email" | translate}}</label>
-          <input type="email" name="email" ng-model="vm.adventuresMailChimp.EMAIL" required>
+          <label>{{"providers.form.email" | translate}}</label>
+          <input type="email" name="email" ng-model="vm.providersMailChimp.EMAIL" required>
         </md-input-container>
-        <md-button type="submit" ng-disabled="MailchimpSubscriptionForm.$invalid" class="md-raised md-primary">{{"adventurers.form.button" | translate}}</md-button>
+        <md-button type="submit" ng-disabled="MailchimpSubscriptionForm.$invalid" class="md-raised md-primary">{{"providers.form.button" | translate}}</md-button>
         
         <!-- Show error message if MailChimp didn't add the email to the list. -->
-        <div layout="row" ng-show="vm.adventuresMailChimp.result === 'error'" class="md-body-1 bg-error layout-margin" ng-cloak>
+        <div layout="row" ng-show="vm.providersMailChimp.result === 'error'" class="md-body-1 bg-error layout-margin" ng-cloak>
           <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Problem">error</md-icon>
-          <span ng-bind-html="vm.adventuresMailChimp.errorMessage"></span>
+          <span ng-bind-html="vm.providersMailChimp.errorMessage"></span>
         </div>
 
         <!-- Show success message if MailChimp added email to the list successfully. -->
-        <div layout="row" ng-show="vm.adventuresMailChimp.result === 'success'" class="md-body-1 bg-success layout-margin" ng-cloak>
+        <div layout="row" ng-show="vm.providersMailChimp.result === 'success'" class="md-body-1 bg-success layout-margin" ng-cloak>
           <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Success">check_circle</md-icon>
           <span>{{"mailchimp.success" | translate}}</span>
         </div>
       </form>
 
-      <!-- <gm-mailchimp-form layout="column" ng-model="vm.adventurer" config="vm.adventuresMailChimp"
-        md-whiteframe="1" class="md-padding bg-white" novalidate>
+      <!-- <form name="providersForm" ng-submit="" layout="column" flex-xs="100" flex-sm="70" flex="50" 
+        layout-margin aria-label="Providers Form" novalidate>
         <div>
-          <h3 class="title text-center">{{"adventurers.form.title" | translate}}</h3>
-          <p class="description text-center">{{"adventurers.form.description" | translate}}</p>
+          <h3 class="title text-center">{{"providers.form.title" | translate}}</h3>
         </div>
         <div layout="row" layout-xs="column" layout-wrap>
           <md-input-container class="md-block" flex="50" flex-xs="100">
-            <label>{{"adventurers.form.firstName" | translate}}</label>
-            <input ng-model="vm.adventurer.firstName">
+            <label>{{"providers.form.firstName" | translate}}</label>
+            <input ng-model="vm.provider.firstName">
           </md-input-container>
           <md-input-container class="md-block" flex="50" flex-xs="100">
-            <label>{{"adventurers.form.lastName" | translate}}</label>
-            <input ng-model="vm.adventurer.lastName">
+            <label>{{"providers.form.lastName" | translate}}</label>
+            <input ng-model="vm.provider.lastName">
+          </md-input-container>
+          <md-input-container class="md-block" flex="50" flex-xs="100">
+            <label>{{"providers.form.phone" | translate}}</label>
+            <input type="tel" ng-model="vm.provider.phone">
+          </md-input-container>
+          <md-input-container class="md-block" flex="50" flex-xs="100">
+            <label>{{"providers.form.city" | translate}}</label>
+            <input ng-model="vm.provider.city">
           </md-input-container>
         </div>
         <md-input-container>
-          <label>{{"adventurers.form.email" | translate}}</label>
-          <input type="email" ng-model="vm.adventurer.email_address">
-          <input type="hidden" ng-model="vm.adventurer.status" value="subscribed">
+          <label>{{"providers.form.email" | translate}}</label>
+          <input type="email" ng-model="vm.provider.email">
         </md-input-container>
-        <md-button type="submit" class="md-raised md-primary">{{"adventurers.form.button" | translate}}</md-button>
-      </gm-mailchimp-form> -->
+        <md-button type="submit" class="md-raised md-primary">{{"providers.form.button" | translate}}</md-button>
+      </form> -->
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="providers" layout="column" class="section-padding" layout-padding layout-align="center center">
-  <div>
-    <h1 class="page-header text-center">
-      {{"providers.title" | translate}}
-    </h1>
-    <p class="description text-center">{{"providers.description" | translate}}</p>
-  </div>
-  <div layout-xs="column" layout="row" layout-padding class="features text-center">
-    <div flex class="feature">
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">money_off</md-icon>
-      <h3 class="title">{{"providers.item1.title" | translate}}</h3>
-      <p class="description md-body-1">{{"providers.item1.description" | translate}}</p>
+  <!-- <section class="newsletter section-padding bg-lightgray" layout="column" layout-padding layout-align="center center">
+    <div>
+      <h1 class="page-header">
+        {{"newsletter.title" | translate}}
+      </h1>
     </div>
-
-    <div flex class="feature">
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">person_add</md-icon>
-      <h3 class="title">{{"providers.item2.title" | translate}}</h3>
-      <p class="description md-body-1">{{"providers.item2.description" | translate}}</p>
+    <div layout="row" layout-align="center center" layout-fill>
+      <form ng-submit="" layout="column" flex flex-gt-sm="70" layout-margin name="newsForm" 
+        aria-label="Newsletter Form" novalidate>
+        <div layout="row" layout-align="center center">
+          <md-input-container flex>
+            <label>{{"newsletter.email" | translate}}</label>
+            <input ng-model="vm.newsletter.email">
+          </md-input-container>
+          <md-button type="submit" class="md-raised md-primary" flex="30">{{"newsletter.subscribe" | translate}}</md-button>
+        </div>
+      </form>
     </div>
+  </section> -->
 
-    <div flex class="feature">
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">dvr</md-icon>
-      <h3 class="title">{{"providers.item3.title" | translate}}</h3>
-      <p class="description md-body-1">{{"providers.item3.description" | translate}}</p>
-    </div>
-
-    <div flex class="feature">
-      <md-icon md-font-library="material-icons" class="icon-big md-accent" alt="Feature">supervisor_account</md-icon>
-      <h3 class="title">{{"providers.item4.title" | translate}}</h3>
-      <p class="description md-body-1">{{"providers.item4.description" | translate}}</p>
-    </div>
-  </div>
-  <div layout="row" layout-align="center center" layout-fill flex="1">
-    <form name="MailchimpSubscriptionForm" ng-submit="addSubscription(vm.providersMailChimp)" 
-      ng-controller="MailchimpSubscriptionCtrl" layout="column" flex-xs="100" flex-sm="70" flex="50" 
-      layout-margin aria-label="Providers Form" novalidate>
-      <div>
-        <h3 class="title text-center">{{"providers.form.title" | translate}}</h3>
-      </div>
-
-      <div layout="row" layout-xs="column" layout-wrap>
-        <md-input-container class="md-block" flex="50" flex-xs="100">
-          <label>{{"providers.form.firstName" | translate}}</label>
-          <input ng-model="vm.providersMailChimp.FNAME">
-        </md-input-container>
-        <md-input-container class="md-block" flex="50" flex-xs="100">
-          <label>{{"providers.form.lastName" | translate}}</label>
-          <input ng-model="vm.providersMailChimp.LNAME">
-        </md-input-container>
-        <md-input-container class="md-block" flex="50" flex-xs="100">
-          <label>{{"providers.form.phone" | translate}}</label>
-          <input type="tel" ng-model="vm.providersMailChimp.PHONE">
-        </md-input-container>
-        <md-input-container class="md-block" flex="50" flex-xs="100">
-          <label>{{"providers.form.city" | translate}}</label>
-          <input ng-model="vm.providersMailChimp.CITY">
-        </md-input-container>
-      </div>
-      <md-input-container>
-        <label>{{"providers.form.email" | translate}}</label>
-        <input type="email" name="email" ng-model="vm.providersMailChimp.EMAIL" required>
-      </md-input-container>
-      <md-button type="submit" ng-disabled="MailchimpSubscriptionForm.$invalid" class="md-raised md-primary">{{"providers.form.button" | translate}}</md-button>
-      
-      <!-- Show error message if MailChimp didn't add the email to the list. -->
-      <div layout="row" ng-show="vm.providersMailChimp.result === 'error'" class="md-body-1 bg-error layout-margin" ng-cloak>
-        <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Problem">error</md-icon>
-        <span ng-bind-html="vm.providersMailChimp.errorMessage"></span>
-      </div>
-
-      <!-- Show success message if MailChimp added email to the list successfully. -->
-      <div layout="row" ng-show="vm.providersMailChimp.result === 'success'" class="md-body-1 bg-success layout-margin" ng-cloak>
-        <md-icon md-font-library="material-icons" class="icon-medium text-white" alt="Success">check_circle</md-icon>
-        <span>{{"mailchimp.success" | translate}}</span>
-      </div>
-    </form>
-
-    <!-- <form name="providersForm" ng-submit="" layout="column" flex-xs="100" flex-sm="70" flex="50" 
-      layout-margin aria-label="Providers Form" novalidate>
-      <div>
-        <h3 class="title text-center">{{"providers.form.title" | translate}}</h3>
-      </div>
-      <div layout="row" layout-xs="column" layout-wrap>
-        <md-input-container class="md-block" flex="50" flex-xs="100">
-          <label>{{"providers.form.firstName" | translate}}</label>
-          <input ng-model="vm.provider.firstName">
-        </md-input-container>
-        <md-input-container class="md-block" flex="50" flex-xs="100">
-          <label>{{"providers.form.lastName" | translate}}</label>
-          <input ng-model="vm.provider.lastName">
-        </md-input-container>
-        <md-input-container class="md-block" flex="50" flex-xs="100">
-          <label>{{"providers.form.phone" | translate}}</label>
-          <input type="tel" ng-model="vm.provider.phone">
-        </md-input-container>
-        <md-input-container class="md-block" flex="50" flex-xs="100">
-          <label>{{"providers.form.city" | translate}}</label>
-          <input ng-model="vm.provider.city">
-        </md-input-container>
-      </div>
-      <md-input-container>
-        <label>{{"providers.form.email" | translate}}</label>
-        <input type="email" ng-model="vm.provider.email">
-      </md-input-container>
-      <md-button type="submit" class="md-raised md-primary">{{"providers.form.button" | translate}}</md-button>
-    </form> -->
-  </div>
-</section>
-
-<!-- <section class="newsletter section-padding bg-lightgray" layout="column" layout-padding layout-align="center center">
-  <div>
-    <h1 class="page-header">
-      {{"newsletter.title" | translate}}
-    </h1>
-  </div>
-  <div layout="row" layout-align="center center" layout-fill>
-    <form ng-submit="" layout="column" flex flex-gt-sm="70" layout-margin name="newsForm" 
-      aria-label="Newsletter Form" novalidate>
-      <div layout="row" layout-align="center center">
-        <md-input-container flex>
-          <label>{{"newsletter.email" | translate}}</label>
-          <input ng-model="vm.newsletter.email">
-        </md-input-container>
-        <md-button type="submit" class="md-raised md-primary" flex="30">{{"newsletter.subscribe" | translate}}</md-button>
-      </div>
-    </form>
-  </div>
-</section> -->
-
+</div>

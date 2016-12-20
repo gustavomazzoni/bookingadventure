@@ -10,7 +10,7 @@ describe( 'booking service', function() {
 	describe( 'saveState method', function() {
 
 		it( 'should save param object into reservation instance variable then return it', inject( function() {
-			var param = {product:{id:1}, slot:{}};
+			var param = {service:{id:1}, slot:{}};
 			var response = booking.saveState(param);
 			// expect to be not null or undefined
 			expect( response ).toBeTruthy();
@@ -19,7 +19,7 @@ describe( 'booking service', function() {
 			// expect to have at least one instance member
 			expect( response ).toBeNonEmptyObject();
 			// expect to have same id passed as parameter
-			expect( response.product.id ).toEqual(1);
+			expect( response.service.id ).toEqual(1);
 		}));
 
 	});

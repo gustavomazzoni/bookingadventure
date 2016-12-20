@@ -1,0 +1,112 @@
+
+<section layout="column" class="section-padding" layout-padding layout-align="center center">
+  <div class="row-space-2">
+    <h1 class="page-header">
+      {{"becomeProvider.title" | translate}}
+    </h1>
+  </div>
+
+  <div layout-xs="column" layout="row" layout-padding>
+    <div flex>
+      <form name="providerForm" ng-submit="" layout="column" class="md-padding" novalidate>
+        <div>
+          <h3 class="title text-center">{{"becomeProvider.form.title" | translate}}</h3>
+          <p class="description text-center">{{"becomeProvider.form.description" | translate}}</p>
+        </div>
+
+        <md-input-container>
+          <label>{{"becomeProvider.form.companyName" | translate}}</label>
+          <input ng-model="vm.provider.companyName">
+        </md-input-container>
+
+        <md-input-container>
+          <label>{{"becomeProvider.form.about" | translate}}</label>
+          <textarea ng-model="vm.provider.about" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+
+        <md-input-container>
+          <label>{{"becomeProvider.form.curriculum" | translate}}</label>
+          <textarea ng-model="vm.provider.curriculum" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+
+        <md-input-container>
+          <label>{{"becomeProvider.form.address" | translate}}</label>
+          <input ng-model="vm.provider.address">
+        </md-input-container>
+
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>{{"becomeProvider.form.city" | translate}}</label>
+            <input ng-model="vm.provider.city">
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>{{"becomeProvider.form.state" | translate}}</label>
+            <md-select ng-model="vm.provider.state">
+              <md-option ng-repeat="state in vm.states" value="{{state.abbrev}}">
+                {{state.abbrev}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>{{"becomeProvider.form.postalCode" | translate}}</label>
+            <input name="postalCode" ng-model="vm.provider.postalCode" placeholder="12345"
+                   required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+
+            <div ng-messages="providerForm.postalCode.$error" role="alert" multiple>
+              <div ng-message="required" class="my-message">
+                {{"becomeProvider.form.postalCode.validation.required" | translate}}
+              </div>
+              <div ng-message="pattern" class="my-message">
+                {{"becomeProvider.form.postalCode.validation.pattern" | translate}}
+              </div>
+              <div ng-message="md-maxlength" class="my-message">
+                {{"becomeProvider.form.postalCode.validation.maxlength" | translate}}
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+
+        
+        <md-button type="submit" ng-disabled="providerForm.$invalid" class="md-raised md-primary">{{"becomeProvider.form.submit" | translate}}</md-button>
+      </form>
+    </div>
+
+    <div flex layout="column" class="features">
+      <md-list>
+        <md-list-item class="md-2-line">
+          <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">flight_takeoff</md-icon>
+          <div class="md-list-item-text">
+            <h3>{{"adventurers.item1.title" | translate}}</h3>
+            <p>{{"adventurers.item1.description" | translate}}</p>
+          </div>
+        </md-list-item>
+
+        <md-list-item class="md-2-line">
+          <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">public</md-icon>
+          <div class="md-list-item-text">
+            <h3>{{"adventurers.item2.title" | translate}}</h3>
+            <p>{{"adventurers.item2.description" | translate}}</p>
+          </div>
+        </md-list-item>
+
+        <md-list-item class="md-2-line">
+          <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">directions_bike</md-icon>
+          <div class="md-list-item-text">
+            <h3>{{"adventurers.item3.title" | translate}}</h3>
+            <p>{{"adventurers.item3.description" | translate}}</p>
+          </div>
+        </md-list-item>
+
+        <md-list-item class="md-2-line">
+          <md-icon md-font-library="material-icons" class="md-avatar icon-medium md-accent" alt="Feature">fingerprint</md-icon>
+          <div class="md-list-item-text">
+            <h3>{{"adventurers.item4.title" | translate}}</h3>
+            <p>{{"adventurers.item4.description" | translate}}</p>
+          </div>
+        </md-list-item>
+      </md-list>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,73 @@
+<div class="booking-box md-whiteframe-1dp bg-white" layout="column">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>{{$ctrl.booking.price | currency}}</h2>
+      <span flex></span>
+      <small class="md-caption">per person</small>
+    </div>
+  </md-toolbar>
+
+  <div>
+    <form flex name="bookingForm" layout="column" class="md-padding">
+      <md-input-container class="md-icon-float md-block">
+        <!-- Use floating label instead of placeholder -->
+        <label>Número de pessoas</label>
+        <md-icon md-font-library="material-icons" class="md-accent" alt="Número de pessoas">group</md-icon>
+        <input ng-model="$ctrl.booking.quantity" type="number" step="1" min="1">
+      </md-input-container>
+
+      <md-button class="md-primary md-raised ba-datepicker"
+               ng-click="$ctrl.showCalendar($event)">
+        Choose a date
+      </md-button>
+
+      <!-- <div layout="row" layout-align="center center" layout-wrap class="md-block">
+        <md-datepicker flex="100" name="dateField" 
+          ng-model="$ctrl.booking.date"
+          md-min-date="$ctrl.minDate" 
+          md-max-date="$ctrl.maxDate" 
+          md-placeholder="Choose a date" 
+          md-open-on-focus
+          required></md-datepicker>
+          
+        <div ng-messages="bookingForm.dateField.$error" class="text-center">
+          <div ng-message="valid">The entered value is not a date!</div>
+          <div ng-message="required">This date is required!</div>
+          <div ng-message="mindate">Date is too early!</div>
+          <div ng-message="maxdate">Date is too late!</div>
+          <div ng-message="filtered">Only weekends are allowed!</div>
+        </div>
+      </div> -->
+
+      <div class="booking-details" ng-show="$ctrl.booking.date">
+        <md-list>
+          <md-list-item>
+            <span>{{$ctrl.adventure.price | currency}} x {{$ctrl.booking.quantity}} {{'reservation.people' | translate}}:</span>
+            <span class="pull-right">{{($ctrl.adventure.price * $ctrl.booking.quantity) | currency}}</span>
+          </md-list-item>
+
+          <md-divider></md-divider>
+
+          <md-list-item>
+            <span>{{'reservation.tax' | translate}}:</span>
+            <span class="pull-right">{{$ctrl.adventure.price * $ctrl.booking.tax | currency}}</span>
+          </md-list-item>
+
+          <md-divider></md-divider>
+
+          <md-list-item>
+            <span>{{'reservation.total' | translate}}:</span>
+            <span class="pull-right">{{$ctrl.getTotal() | currency}}</span>
+          </md-list-item>
+        </md-list>
+      </div>
+
+      <div layout="row" layout-align="center center" layout-wrap>
+        <md-button flex class="md-raised md-accent">Reservar agora</md-button>
+      </div>
+      <div layout="row" layout-align="center">
+        <small class="md-caption">You won’t be charged yet</small>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+{
+	"becomeProvider": {
+		"title": "Vamos fazer de você um provedor de aventuras!",
+		"form": {
+			"title": "Comece criando uma página profissional!",
+			"description": "",
+			"companyName": "Nome da Empresa / Profissional",
+			"about": "Fale sobre você",
+			"curriculum": "Fale sobre você como profissional",
+			"address": "Endereço",
+			"city": "Cidade",
+			"state": "Estado",
+			"postalCode": "CEP",
+			"postalCode.validation": {
+				"required": "You must supply a postal code.",
+				"pattern": "That doesn't look like a valid postal code.",
+				"maxlength": "Don't use the long version silly...we don't need to be that specific..."
+			},
+			"submit": "Continuar"
+		}
+	}
+}

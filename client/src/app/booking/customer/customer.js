@@ -11,14 +11,19 @@ angular.module( 'bookingadventure.booking' )
       translate: ['$translate', '$translatePartialLoader', function($translate, $translatePartialLoader) {
         $translatePartialLoader.addPart('customer');
         $translate.refresh();
+      }],
+      chronicHealthProblemsPromise: ['customer', function(customer) {
+        return customer.findAllChronicHealthProblems();
       }]
     },
     data:{ pageTitle: 'Booking - Customer', step: 1 }
   });
 }])
 
-.controller( 'CustomerCtrl', ['$scope', function CustomerController( $scope ) {
+.controller( 'CustomerCtrl', ['$scope', 'chronicHealthProblemsPromise', function CustomerController( $scope, chronicHealthProblemsPromise ) {
   var vm = this;
+
+  vm.chronicHealthProblems = chronicHealthProblemsPromise;
 
 }]);
 

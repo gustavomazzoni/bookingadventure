@@ -1,4 +1,4 @@
-var translateApp = function ($translateProvider, $translatePartialLoaderProvider) {
+function translateApp($translateProvider, $translatePartialLoaderProvider) {
     $translateProvider.useLoader('$translatePartialLoader', {
       urlTemplate: '/assets/translation/{lang}/{part}.json'
     });
@@ -12,6 +12,6 @@ var translateApp = function ($translateProvider, $translatePartialLoaderProvider
 	$translateProvider.preferredLanguage('pt-BR');
 	// Enable escaping of HTML
 	$translateProvider.useSanitizeValueStrategy('escape');
-};
+}
 
 angular.module('translateApp', ['pascalprecht.translate']).config(translateApp);

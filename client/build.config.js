@@ -23,9 +23,6 @@ module.exports = {
     js: [ 'src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js' ],
     jsunit: [ 'src/**/*.spec.js' ],
     
-    coffee: [ 'src/**/*.coffee', '!src/**/*.spec.coffee' ],
-    coffeeunit: [ 'src/**/*.spec.coffee' ],
-
     atpl: [ 'src/app/**/*.tpl.html' ],
     ctpl: [ 'src/common/**/*.tpl.html' ],
 
@@ -73,7 +70,8 @@ module.exports = {
       'vendor/angular-scroll/angular-scroll.min.js',
       'vendor/angular-mailchimp/angular-mailchimp.js',
       'vendor/angular-resource/angular-resource.min.js',
-      'vendor/angular-sanitize/angular-sanitize.min.js'
+      'vendor/angular-sanitize/angular-sanitize.min.js',
+      'vendor/angular-messages/angular-messages.min.js'
     ],
     css: [
       'vendor/angular-material/angular-material.min.css'

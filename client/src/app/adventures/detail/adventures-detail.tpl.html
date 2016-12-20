@@ -1,0 +1,127 @@
+<div class="adventure">
+
+  <section class="header-section header-section--with-photos" style="background-image: url(&quot;http://cdn-adventure-tours.themedelight.com/wp-content/uploads/2015/07/alaska.jpg&quot;);" layout-align="center center">
+    <div class="header-section__wrapper" layout="column" layout-padding layout-align="center center">
+      <h1 class="header-section__title">{{vm.adventure.title}}</h1>
+      <p class="md-subhead">{{vm.adventure.location}}</p>
+    </div>
+  </section>
+
+  <!-- <section class="adventure__header" md-whiteframe="1" layout-xs="column" layout="row" layout-padding layout-align="center center">
+    <div class="adventure-summary">
+      <div class="avatar avatar--round" layout="column">
+        <img ng-src="{{vm.adventure.provider.photo}}" class="avatar__image--lg">
+        <span hide-xs class="md-subhead text-muted">{{vm.adventure.provider.name}}</span>
+      </div>
+      <div class="adventure-summary__wrapper" layout="column">
+        <h1 class="md-headline adventure-summary__name">{{vm.adventure.title}}</h1>
+        <span class="md-subhead adventure-summary__location text-muted">{{vm.adventure.location}}</span>
+      </div>
+    </div>
+
+    <div class="book">
+      
+    </div>
+  </section> -->
+
+  <section class="adventure__content" layout="row" layout-align="center start" layout-wrap>
+    <main class="adventure__content-main" layout-margin flex-xs="100" flex="60">
+      <div class="adventure__info md-padding md-whiteframe-1dp bg-white" layout="column">
+        <h2 class="md-body-2">About this adventure</h2>
+
+        <div class="adventure__description md-body-1" ng-bind-html="vm.adventure.description">
+          <!-- <p>Platea rutrum. Enim quam montes Porttitor nam, nullam. Penatibus non. Sociis aptent laoreet tempor Ornare laoreet dictumst, feugiat ut nunc adipiscing orci ridiculus tempus.</p>
+
+          <p>Fringilla. Ultrices sollicitudin tristique, netus, habitasse sem. Morbi lacus donec pellentesque dui lacus Platea felis praesent.</p> -->
+        </div>
+
+        <md-list class="adventure__details">
+          <md-divider></md-divider>
+          <!-- <md-subheader class="md-no-sticky">Details</md-subheader> -->
+          
+          <md-list-item class="secondary-button-padding">
+            <!-- <md-icon md-svg-icon="{{setting.icon}}"></md-icon> -->
+            <p class="md-body-2">Duração</p>
+            <span flex="50" class="md-body-1 md-secondary text-right">
+              {{vm.adventure.details.duration}}
+            </span>
+          </md-list-item>
+          
+          <md-divider></md-divider>
+          
+          <md-list-item class="secondary-button-padding">
+            <!-- <md-icon md-svg-icon="{{setting.icon}}"></md-icon> -->
+            <p class="md-body-2">Locais visitados</p>
+            <span flex="50" class="md-body-1 md-secondary text-right">
+              {{vm.adventure.details.places}}
+            </span>
+          </md-list-item>
+          
+          <md-divider></md-divider>
+          
+          <md-list-item class="secondary-button-padding">
+            <!-- <md-icon md-svg-icon="{{setting.icon}}"></md-icon> -->
+            <p class="md-body-2">Idiomas</p>
+            <span flex="50" class="md-body-1 md-secondary text-right">
+              {{vm.adventure.details.languages}}
+            </span>
+          </md-list-item>
+
+          <md-divider></md-divider>
+          
+          <md-list-item class="secondary-button-padding">
+            <!-- <md-icon md-svg-icon="{{setting.icon}}"></md-icon> -->
+            <p class="md-body-2">Depende do clima?</p>
+            <span flex="50" class="md-body-1 md-secondary text-right">
+              {{vm.adventure.details.dependsWheater}}
+            </span>
+          </md-list-item>
+
+          <md-divider></md-divider>
+          
+          <md-list-item class="secondary-button-padding">
+            <!-- <md-icon md-svg-icon="{{setting.icon}}"></md-icon> -->
+            <p class="md-body-2">Nível da atividade</p>
+            <span flex="50" class="md-body-1 md-secondary text-right">
+              {{vm.adventure.details.level}}
+            </span>
+          </md-list-item>
+
+          <md-divider></md-divider>
+          
+          <md-list-item class="secondary-button-padding">
+            <!-- <md-icon md-svg-icon="{{setting.icon}}"></md-icon> -->
+            <p class="md-body-2">Incluso</p>
+            <span flex="50" class="md-body-1 md-secondary text-right">
+              {{vm.adventure.details.included}}
+            </span>
+          </md-list-item>
+
+          <md-divider></md-divider>
+          
+          <md-list-item class="secondary-button-padding">
+            <!-- <md-icon md-svg-icon="{{setting.icon}}"></md-icon> -->
+            <p class="md-body-2">Ponto de encontro</p>
+            <span flex="50" class="md-body-1 md-secondary text-right">
+              {{vm.adventure.details.meetingSpot}}
+            </span>
+          </md-list-item>
+        </md-list>
+      </div>
+    </main>
+
+    <aside class="adventure__content-main" layout-margin flex-xs="100" flex="30" flex-gt-md="20">
+      
+      <booking-form 
+          adventure="vm.adventure"
+          availableDates="vm.availableDates"
+          selectedDate=""
+          on-submit="vm.startBooking()"></booking-form>
+      
+      <div class="md-padding md-whiteframe-1dp bg-white text-center" layout-align="center">
+        <a href="#" class="md-caption">Termos e condições</a>
+      </div>
+    </aside>
+  </section>
+
+</div>

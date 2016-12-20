@@ -14,8 +14,8 @@
  */
 angular.module( 'bookingadventure.adventures', [
   'ui.router',
-  'pascalprecht.translate',
-  'bookingadventure.services'
+  'bookingadventure.adventures.list',
+  'bookingadventure.adventures.detail'
 ])
 
 /**
@@ -25,36 +25,12 @@ angular.module( 'bookingadventure.adventures', [
  */
 .config(['$stateProvider', function config( $stateProvider ) {
   $stateProvider.state( 'adventures', {
-    url: '/:location',
+    abstract: true,
+    url: '/adventures',
     views: {
       "main": {
-        controller: 'AdventuresCtrl',
-        controllerAs: 'vm',
-        templateUrl: 'adventures/adventures.tpl.html',
-        resolve: {
-          translate: ['$translate', '$translatePartialLoader', function($translate, $translatePartialLoader) {
-            $translatePartialLoader.addPart('adventures');
-            $translate.refresh();
-          }],
-          // Resolve http request to API
-          // to search for adventures in the location
-          adventuresList: ['$stateParams', 'adventure', function($stateParams, adventure) {
-            return adventure.getList($stateParams.location);
-          }]
-        }
+        template: '<ui-view></ui-view>'
       }
-    },
-    data:{ pageTitle: 'Adventures' }
+    }
   });
-}])
-
-/**
- * And of course we define a controller for our route.
- */
-.controller( 'AdventuresCtrl', ['$stateParams', 'adventuresList', 
-  function AdventuresController( $stateParams, adventuresList ) {
-  var vm = this;
-  vm.location = $stateParams.location;
-  vm.adventuresList = adventuresList;
 }]);
-

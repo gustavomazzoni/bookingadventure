@@ -1,8 +1,11 @@
 angular.module( 'bookingadventure.booking' )
 
 .config(['$stateProvider', function config( $stateProvider ) {
-  $stateProvider.state( 'booking.confirmation', {
-    url: '/confirmation',
+  $stateProvider.state( 'confirmation', {
+    url: '/bookings',
+    params: {
+      bookingId: null
+    },
     templateUrl: 'booking/confirmation/confirmation.tpl.html',
     controller: 'ConfirmationCtrl',
     controllerAs: 'vm',
@@ -11,22 +14,20 @@ angular.module( 'bookingadventure.booking' )
         $translatePartialLoader.addPart('confirmation');
         $translate.refresh();
       }],
-      // check if booking process is finished
-      checkSession: ['booking', function(booking) {
-        if (!booking.isFinished()) {
-          console.log('Request not valid');
-          // if not valid
-          // Redirect to first state.
-          $state.go('booking.calendar');
-        }
+      // Perform http request to API
+      // to get Booking registration
+      bookingPromise: ['$stateParams', 'booking', function($stateParams, booking) {
+        return booking.findById($stateParams.bookingId);
       }]
     },
-    data:{ pageTitle: 'Booking - Confirmation', step: 3 }
+    data:{ pageTitle: 'Booking - Confirmation' }
   });
 }])
 
-.controller( 'ConfirmationCtrl', ['$scope', function ConfirmationController( $scope ) {
+.controller( 'ConfirmationCtrl', ['$scope', 'bookingPromise', function ConfirmationController( $scope, bookingPromise ) {
   var vm = this;
+
+  vm.booking = bookingPromise;
 
 }]);
 

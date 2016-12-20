@@ -9,8 +9,6 @@
     .module('toastNotification', [])
     .directive('toastNotification', toastNotification);
 
-
-
   toastNotification.$inject = ['$mdToast'];
   function toastNotification($mdToast) {
     function link(scope, element, attrs) {

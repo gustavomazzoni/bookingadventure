@@ -4,7 +4,7 @@ angular.module( '404page', ['ui.router'] )
   $stateProvider.state( '404', {
     url: '/404',
     templateUrl: '404/404.tpl.html',
-    data:{ pageTitle: 'Booking - Page Not Found' }
+    data:{ pageTitle: 'Page Not Found' }
   });
 }]);
 

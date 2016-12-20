@@ -3,10 +3,10 @@ angular.module( 'bookingadventure', [
   'templates-common',
   'translateApp',
   'pascalprecht.translate',
-  // 'bookingadventure.services',
   'bookingadventure.home',
+  'bookingadventure.become-provider',
   // 'bookingadventure.about',
-  // 'bookingadventure.adventures',
+  'bookingadventure.adventures',
   // 'bookingadventure.booking',
   'ui.router',
   'ngMaterial',
@@ -37,7 +37,7 @@ angular.module( 'bookingadventure', [
   // For any unmatched url, 
   $urlRouterProvider.otherwise('/');
   // use the HTML5 History API so we can remove # (hashtag) from the URL
-  $locationProvider.html5Mode(true).hashPrefix('!');
+  // $locationProvider.html5Mode(true).hashPrefix('!');
 }])
 
 .run( ['$window', '$translate', function run ($window, $translate) {

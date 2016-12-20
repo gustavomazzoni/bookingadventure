@@ -48,15 +48,18 @@ describe( 'adventure service', function() {
 	describe( 'getList method', function() {
 
 		it( 'should return an array of adventure objects', inject( function() {
-			var response = adventure.getList();
-			// expect to be not null or undefined
-			expect( response ).toBeTruthy();
-			// expect to be an array
-			expect( response ).toBeArray();
-			// expect to have at least one element
-			expect( response.length ).toBeGreaterThan(0);
-			// expect to have an object elementbe
-			expect( response ).toBeArrayOfObjects();
+			adventure.getList().then(function(res) {
+				var response = res;
+
+				// expect to be not null or undefined
+				expect( response ).toBeTruthy();
+				// expect to be an array
+				expect( response ).toBeArray();
+				// expect to have at least one element
+				expect( response.length ).toBeGreaterThan(0);
+				// expect to have an object elementbe
+				expect( response ).toBeArrayOfObjects();
+			});
 		}));
 
 	});

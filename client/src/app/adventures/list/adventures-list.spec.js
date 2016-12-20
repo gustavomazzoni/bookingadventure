@@ -5,7 +5,7 @@
  * automatically.
  */
 describe( 'adventures section', function() {
-  beforeEach( module( 'bookingadventure.adventures' ) );
+  beforeEach( module( 'bookingadventure.adventures.list' ) );
 
   it( 'should have a dummy test', inject( function() {
     expect( true ).toBeTruthy();

@@ -13,13 +13,18 @@ angular.module( 'bookingadventure.booking' )
         $translate.refresh();
       }],
       // Perform http request to API
-      // to get slots from product
-      slots: ['$stateParams', 'slot', function($stateParams, slot) {
-        return slot.getListByIdProduct($stateParams.idProduct);
+      // to get available dates
+      datesPromise: ['$stateParams', 'availability', function($stateParams, availability) {
+        return availability.findAvailableDaysForMonth($stateParams.serviceId, $stateParams.date, $stateParams.quantity);
       }],
-      dates: function() {
-        return ["2016-07-01","2016-07-02","2016-07-03","2016-07-04","2016-07-05","2016-07-06","2016-07-07"];
-      },
+      // Perform http request to API
+      // to get available slots when date is selected
+      slotsPromise: ['$stateParams', 'availability', function($stateParams, availability) {
+        if ($stateParams.date) {
+          return availability.findAvailableSlotsForDay($stateParams.serviceId, $stateParams.date, $stateParams.quantity);
+        }
+      }],
+      // number of adventurous
       quantities: function() {
         return [1,2,3,4,5,6,7,8,9];
       }
@@ -28,29 +33,35 @@ angular.module( 'bookingadventure.booking' )
   });
 }])
 
-.controller( 'CalendarCtrl', ['$scope', '$stateParams', 'slots', 'dates', 'quantities',
-  function CalendarController( $scope, $stateParams, slots, dates, quantities ) {
+.controller( 'CalendarCtrl', ['$scope', '$state', '$stateParams', 'slotsPromise', 'datesPromise', 'quantities', 'availability',
+  function CalendarController( $scope, $state, $stateParams, slotsPromise, datesPromise, quantities, availability ) {
   var vm = this;
-  vm.slots = slots;
-  vm.dates = dates;
+  vm.slots = slotsPromise;
   vm.quantities = quantities;
 
-  vm.selectedDate = $stateParams.date || vm.dates[3];
+  vm.selectedDate = $stateParams.date;
   vm.selectedQuantity = $stateParams.quantity || vm.quantities[0];
+  vm.availableDates = datesPromise;
 
   // set quantity in formData inherited scope
   setQuantity(vm.selectedQuantity);
-  
-  vm.filterSlots = function(slot, index, array) {
-    if (!!slot.date.match(vm.selectedDate) && slot.vacancies >= vm.selectedQuantity) {
-      return true;
-    }
-    return false;
+
+  vm.selectDate = function(date) {
+    $state.go('.',{date: date});
+  };
+
+  vm.loadDatesMonth = function(month) {
+    return availability.findAvailableDaysForMonth($stateParams.serviceId, month, $stateParams.quantity);
   };
 
   vm.selectSlot = function(slot) {
     // Set slot object inside formData object on inherited scope
     $scope.formData.slot = slot;
+
+    $scope.formData.price = slot.price;
+    var subtotal = ($scope.formData.slot.price * $scope.formData.quantity);
+    var tax = subtotal * $scope.formData.tax;
+    $scope.formData.total = subtotal + tax;
   };
 
   function setQuantity(quantity) {
