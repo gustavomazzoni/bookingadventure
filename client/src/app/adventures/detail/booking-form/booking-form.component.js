@@ -12,32 +12,39 @@ var bookingForm = {
   }
 };
 
-BookingFormController.$inject = ['$mdPanel', '$q'];
-function BookingFormController($mdPanel, $q) {
+BookingFormController.$inject = ['$mdPanel', '$q', 'availability'];
+function BookingFormController($mdPanel, $q, availability) {
   var vm = this;
+
+  function _init() {
+    var today = new Date();
+    vm.minDate = today;
+    vm.maxDate = new Date(
+        today.getFullYear(),
+        today.getMonth() + 2,
+        today.getDate());
+
+    vm.booking = {
+      slot_id: null,
+      date: vm.selectedDate,
+      price: +vm.adventure.price,
+      quantity: 1,
+      total: 0,
+      state: 'new',
+      tax: 0.1,
+      adventure: vm.adventure
+    };
+
+    availability.findAvailableDaysForMonth(1).then(function(results) {
+      vm.availableDates = results || [];
+    });
+  }
+
+  _init();
   
-  var today = new Date();
-  vm.minDate = today;
-  vm.maxDate = new Date(
-      today.getFullYear(),
-      today.getMonth() + 2,
-      today.getDate());
-
-  vm.booking = {
-    slot_id: null,
-    date: vm.selectedDate,
-    price: +vm.adventure.price,
-    quantity: 1,
-    total: 0,
-    state: 'new',
-    tax: 0.1,
-    adventure: vm.adventure
-  };
-
-  vm.availableDates = [];
   vm.loadDatesMonth = function(month) {
     console.log('loadDatesMonth', month);
-    return $q.when(vm.availableDates);
+    return $q.when([]);
   };
   vm.onDateSelected = function(date) {
     console.log('onDateSelected', date);
@@ -115,6 +122,7 @@ PanelCalendarCtrl.prototype.selectDate = function(date) {
 angular
   .module( 'bookingadventure.booking-form', [
     'pascalprecht.translate',
-    'booking.widgets.calendar'
+    'booking.widgets.calendar',
+    'bookingadventure.services'
   ])
   .component('bookingForm', bookingForm);
