@@ -262,9 +262,31 @@ a.ui-state-default, span.ui-state-default {
 }
 a.ui-state-default {
     color: #484848;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent;
 }
 span.ui-state-default {
     color: #dce0e0;
+}
+
+a.ui-state-default:hover, span.ui-state-default:hover {
+	text-decoration:none
+}
+a.ui-state-default:hover,
+a.ui-state-default.ui-state-active,
+a.ui-state-default.ui-state-highlight {
+	background-color: #ff5a5f;
+	color: white;
+	border-color: #ff5a5f;
+	margin: -1px;
+	width: 34px;
+}
+a.ui-state-default:hover,
+a.ui-state-default.ui-state-active:hover,
+a.ui-state-default.ui-state-highlight:hover {
+	opacity: 0.9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"
 }
 /*a {
     color: #008489;

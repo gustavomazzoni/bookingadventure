@@ -35,32 +35,15 @@
 			<tr ng-repeat="week in weeks">
 				<td ng-repeat="date in week" 
 					ng-class="{'ui-datepicker-other-month' : !date.day, 'ui-datepicker-today' : date.today, 'ui-datepicker-unselectable ui-state-disabled' : date.past, 'ui-datepicker-available' : date.available, 
-					'ui-busy-date-exp' : date.day && !date.available, 'ui-datepicker-selected' : (date.date === selectedDate) }"
+					'ui-busy-date-exp' : date.day && !date.available}"
 					ng-click="selectDate(date)">
 					<span class="ui-state-default" ng-if="!date.available">{{date.day}}</span>
-					<a href="#" class="ui-state-default" ng-if="date.available">{{date.day}}</a>
+					<a href="#" class="ui-state-default" ng-class="{'ui-state-active' : (date.date === selectedDate)}" ng-if="date.available">{{date.day}}</a>
 		            <!-- <br/>
 		            <span class="detail">{{date.details.minPrice | currency}}</span> -->
 		        </td>
 		    </tr>
-			<!-- <tr>
-				<td class="ui-datepicker-unselectable ui-state-disabled ui-datepicker-other-month ui-datepicker-week-end"></td>
-				<td class="ui-datepicker-unselectable ui-state-disabled ui-datepicker-other-month"></td>
-				<td class="ui-datepicker-unselectable ui-state-disabled ui-datepicker-other-month"></td>
-				<td class="ui-datepicker-unselectable ui-state-disabled ui-datepicker-other-month"></td>
-				<td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp ui-busy-date-exp">
-					<span class="ui-state-default">1</span>
-				</td>
-				<td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp ui-busy-date-exp">
-					<span class="ui-state-default">2</span>
-				</td>
-				<td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp ui-datepicker-week-end">
-					<span class="ui-state-default">3</span>
-				</td>
-			</tr>
-			<tr>
-				<td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp ui-datepicker-week-end"><span class="ui-state-default">4</span></td><td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp"><span class="ui-state-default">5</span></td><td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp"><span class="ui-state-default">6</span></td><td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp"><span class="ui-state-default">7</span></td><td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp"><span class="ui-state-default">8</span></td><td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp"><span class="ui-state-default">9</span></td><td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp ui-datepicker-week-end"><span class="ui-state-default">10</span></td>
-			</tr>
+			<!-- 
 			<tr>
 				<td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp ui-datepicker-week-end">
 					<span class="ui-state-default">11</span>
@@ -84,14 +67,12 @@
 					<a href="#" class="ui-state-default">17</a>
 				</td>
 			</tr>
-			<tr>
-				<td class="ui-datepicker-week-end"><a href="#" class="ui-state-default">18</a></td><td><a href="#" class="ui-state-default">19</a></td><td><a href="#" class="ui-state-default">20</a></td><td><a href="#" class="ui-state-default">21</a></td><td><a href="#" class="ui-state-default">22</a></td><td><a href="#" class="ui-state-default">23</a></td><td class="ui-datepicker-week-end"><a href="#" class="ui-state-default">24</a></td>
-			</tr>
-			<tr>
-				<td class="ui-datepicker-week-end"><a href="#" class="ui-state-default">25</a></td><td><a href="#" class="ui-state-default">26</a></td><td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp"><span class="ui-state-default">27</span></td><td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp"><span class="ui-state-default">28</span></td><td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp"><span class="ui-state-default">29</span></td><td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp"><span class="ui-state-default">30</span></td><td class="ui-datepicker-unselectable ui-state-disabled ui-busy-date-exp ui-datepicker-week-end"><span class="ui-state-default">31</span></td>
-			</tr> -->
+			 -->
 		</tbody>
 	</table>
+	<div class="loading" ng-if="!weeks">
+      <p>Loading dates...</p>
+    </div>
 	<div class="ui-datepicker-buttonpane ui-widget-content">
 		<button class="ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all">Clear dates</button>
 		<div class="ui-datepicker-additional-info">
